@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "alt": "",
+      "photo": "1.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
+    },
+    {
+      "id": 2,
+      "alt": "",
+      "photo": "3.png",      
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
+    },
+    {  
+      "id": 3,
+      "alt": "",
+      "photo": "4.png",      
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
+    },
+    {
+      "id": 4,
+      "alt": "",
+      "photo": "5.png",      
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
+    },
+    {
+      "id": 5,
+      "alt": "",
+      "photo": "6.png",      
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
+    },
+    {
+      "id": 6,
+      "alt": "",
+      "photo": "7.png",      
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
+    }
+
+]

@@ -1,0 +1,33 @@
+.header-container{
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    padding: 0px;
+    text-align: center;
+    background-image: url("/images/2.jpg"); /* The image used */
+    background-color: var(--brand); /* Used if the image is unavailable */
+    height: 200px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    white-space: nowrap;
+    animation: headerAnim 8s infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+    overflow: hidden;
+    font-size: 6rem;
+    position: relative;
+    top: -50px;
+}
+@keyframes headerAnim {
+    /*from {top: -300px;}
+    to {top: 220px;}*/
+    0%   {opacity: 0;top: -50px;}
+    50%  {opacity: 1;}
+    100% {opacity: 0;top: 120px;}
+
+}
+  

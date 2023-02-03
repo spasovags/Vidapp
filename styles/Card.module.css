@@ -1,0 +1,90 @@
+.card {
+    border-radius: 30px;
+    background-color: white;  
+    opacity: 0;
+    margin:  1em 2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-card {
+  font-family: 'Indie Flower', cursive;
+  color: var(--brand);
+  margin: 0px 0.5em 0.7em;
+}
+.photoCont{
+  width: 100%;
+}
+.photoCard {
+    width: 100%;
+    height: 500px;
+    margin: 0em;
+    position: relative;
+}
+.photoCard img{
+  width: auto;
+  border-radius: 30px;
+
+}
+.leftAnim{
+  opacity: 1;
+  transform: translateX(-100%);
+  animation-name: slideLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideLeft{
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+.rightAnim{
+  opacity: 1;
+  transform: translateX(100%);
+  animation-name: slideRight;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideRight{
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+/*media queries*/
+@media (min-width: 600px) {
+  .card{
+    height: 300px;
+    margin-bottom: 3em;
+  }
+  .leftPhoto.card{
+    flex-direction: row;
+  }
+  .rightPhoto.card{
+    flex-direction: row-reverse;
+  }
+  .photoCard{
+    height: 330px;
+  }
+  .photoCont{
+    flex: 1;
+  }
+  .text-card{
+    flex: 1;
+  }
+}
+@media (min-width: 1000px) {
+  .card{
+   width: 50%;
+   margin: 1em auto 3em auto;
+  }
+}

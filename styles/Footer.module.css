@@ -1,0 +1,53 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer);
+    padding: 0em 0.3em;
+    margin-top: 20px;
+}
+.footer-sm-icons{
+    width: 100%;
+    font-size:xx-large;
+    color: var(--text-footer);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px;
+}
+.footer-sm-icons svg{
+    margin: 10px;
+    cursor: pointer;
+    padding: 0px 0.2em;
+}
+.iconYoutube:hover{
+  color: red;
+}
+.iconLinkedin:hover{
+    color: steelblue;
+}
+.iconGithub:hover{
+    color: #ed34d2;
+}
+.iconDev:hover{
+      color: #14ff;
+}
+.iconAnim{
+    animation: smIconAnim 1s linear forwards;
+}
+.iconLinkedin{
+    animation-delay: 1s;
+}
+.iconGithub{
+    animation-delay: 2s;
+}
+.iconDev{
+    animation-delay: 3s;
+}
+@keyframes smIconAnim {
+    from {font-size: xx-large;}
+    to {font-size: 4rem;
+       color: white;
+    }
+}
