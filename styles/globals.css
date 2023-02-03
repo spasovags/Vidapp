@@ -15,12 +15,10 @@ a {
 html {
   box-sizing: border-box;
   color: var(--text1);
-    /*#9c40b4
-rgb(156,64,180)
-hsl(288,48%,48%)*/
-  --brand-hue: 288;
-  --brand-saturation: 48%;
-  --brand-lightness: 48%;
+    
+  --brand-hue: 289;
+  --brand-saturation: 67%;
+  --brand-lightness: 63%;
   
   /* light */
   --brand-light: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-lightness));
