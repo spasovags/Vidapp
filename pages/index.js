@@ -23,9 +23,9 @@ export default function Home() {
         <meta name="description" content="Portfolio" />
         <link rel="icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&display=swap" rel="stylesheet"/>
-       </Head>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@500&display=swap" rel="stylesheet"/>
+</Head>
       
       <CardList technologies={techno}/>
     </main>
