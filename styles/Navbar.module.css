@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@500&display=swap');
 
 .menu-li{
     list-style: none;
   }
   .nav-background {
-    font-family: 'Indie Flower', cursive;      background: var(--brand);
-      width: 100%;
-      position: sticky;
-      top: 0;
-      z-index: 10000;
-    }
+    background-color: var(--brand);
+    font-family: 'Stick No Bills', sans-serif;    
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }
     .navbar-container {
       padding:0em 0.3em;
       display: flex;
@@ -86,14 +87,16 @@
       transform: scaleX(1.4);
     }
     .menu-container.active span:nth-child(1){
-      top: 0px;
-      transform: scaleX(1.5);
+      top: 10px;
+      transform: scaleX(1.4);
     }
     .menu-container.active span:nth-child(2){
-      top: 0px;
+      top: 13px;
+      transform: scaleX(1.6);
     }
     .menu-container.active span:nth-child(3){
-      top: 0px;
+      top: 16px;
+      transform: scaleX(1.4);
     }
   
     /* end of hamburger menu */
@@ -140,6 +143,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        align-items: center;
         margin-block-start: 0px;
         margin-block-end: 0px;
       }
@@ -150,7 +154,7 @@
       }
       .menu-link {
         width: auto;
-        padding: 16px 10px;
+        padding: 11px 10px;
         color: var(--text2);
         background-image: none;
         background-color: var(--brand);

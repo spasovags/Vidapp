@@ -14,7 +14,7 @@ const Card = (props) => {
 
   let photoPosition = props.indexAnim%2==0?leftPhoto:rightPhoto;
   
-  const basePath = '/images/techstack'
+  const basePath = '/images'
   const { ref: cardRef, inView: IsCardsVisible } = useInView({triggerOnce: true, threshold:0.2});
 
   return (
