@@ -110,6 +110,7 @@
       font-size: 16px;
       cursor: pointer;
       border-style: none;
+      font-size:x-large;
     }
     .menu-link:hover {
       color: var(--text3);
@@ -120,9 +121,7 @@
       position: relative;
       display: inline-block;
     }
-    .menu-link{
-      font-family: 'Indie Flower', cursive;
-    }
+    
     
     .menu-li-content {
       display: none;

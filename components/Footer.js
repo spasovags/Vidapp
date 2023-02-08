@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const { ref: cardRef, inView: IsIconVisible } = useInView({threshold:0.5});
+  const { ref: cardRef, inView: IsIconVisible } = useInView({threshold:0.1});
 
   return (
     <div className={`${styles["footer-container"]}`} >
