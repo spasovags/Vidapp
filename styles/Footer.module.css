@@ -8,13 +8,15 @@
     margin-top: 20px;
 }
 .footer-sm-icons{
-    width: 100%;
     font-size:xx-large;
     color: var(--text-footer);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 15px 0px;
+    position: relative;
+    left: -50%;
+    width: 100%;
 }
 .footer-sm-icons svg{
     margin: 10px;
@@ -34,20 +36,14 @@
       color: #14ff;
 }
 .iconAnim{
-    animation: smIconAnim 1s linear forwards;
+    animation: smIconAnim 13s linear infinite;
 }
-.iconLinkedin{
-    animation-delay: 1s;
-}
-.iconGithub{
-    animation-delay: 2s;
-}
-.iconDev{
-    animation-delay: 3s;
-}
+
 @keyframes smIconAnim {
-    from {font-size: xx-large;}
-    to {font-size: 4rem;
-       color: white;
+    from {
+        left: -50%;
+    }
+    to {
+        left: 100%;
     }
 }
