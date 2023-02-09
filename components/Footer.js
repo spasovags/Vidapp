@@ -32,9 +32,27 @@ const Footer = () => {
         icon={faDev}
         className={`${styles["iconDev"]}`}/>  
       </div> 
-      <div className={`${styles["footer-info"]}`} >
-      
-      </div>     
+        <form className={`${styles["footer-form"]}`} action="/action.php">
+         <fieldset>
+          <legend>Personal data</legend>
+          <div className={`${styles["footer-radio"]}`} >
+           <input type="radio" id="female" name="gender" value="female"/>
+           <label for="female">female</label>
+           <input type="radio" id="m" name="gender" value="male"/>
+           <label for="male">male</label>
+           <input type="radio" id="other" name="gender" value="other"/>
+           <label for="other">other</label>
+          </div>
+
+          <div className={`${styles["footer-typetext"]}`} >
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="John"/>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" value="Doe"/>
+            <input type="submit" value="SUBMIT"/>  
+          </div> 
+         </fieldset>            
+       </form> 
     </div>      
   )
 }
