@@ -33,9 +33,10 @@ const Footer = () => {
         className={`${styles["iconDev"]}`}/>  
       </div> 
         <form className={`${styles["footer-form"]}`} action="/action.php">
-         <fieldset>
+         <fieldset className={`${styles["footer-fieldset"]}`} >
           <legend>Personal data</legend>
           <div className={`${styles["footer-radio"]}`} >
+           <p>Gender</p>
            <input type="radio" id="female" name="gender" value="female"/>
            <label for="female">female</label>
            <input type="radio" id="m" name="gender" value="male"/>
