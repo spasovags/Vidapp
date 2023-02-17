@@ -43,7 +43,7 @@
 
 }
 .cardAnim{
-  opacity: 1;
+  opacity: 0;
   animation-name: cardAnims;
   animation-duration: 2s;
   animation-fill-mode: forwards;

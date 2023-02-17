@@ -13,6 +13,7 @@ import {
 
 const Footer = () => {
   const { ref: cardRef, inView: IsIconVisible } = useInView({threshold:0.1});
+  const { ref: formRef, inView: IsFormVisible } = useInView({threshold:0.5});
 
   return (
     <div className={`${styles["footer-container"]}`} >
@@ -33,7 +34,9 @@ const Footer = () => {
         className={`${styles["iconDev"]}`}/>  
       </div> 
         <form className={`${styles["footer-form"]}`} action="/action.php">
-         <fieldset className={`${styles["footer-fieldset"]}`} >
+         <fieldset className={`${styles["footer-fieldset"]}
+               ${IsFormVisible ? `${styles["formAnims"]}` : ""}`}
+               ref={formRef}>
           <legend>Personal data</legend>
           <div className={`${styles["footer-radio"]}`} >
            <p>Gender</p>
