@@ -121,7 +121,7 @@
   @keyframes formAnims{
     from {
       opacity: 0;
-      box-shadow: 20px 20px 10em white, 20px 20px 10em white;
+      box-shadow: 20px 20px 10em white;
     }
   
     to {
