@@ -5,11 +5,10 @@ import styles from '../styles/CardList.module.css'
 
 const CardList = ({technologies}) => {
 
-   return (
-    
+   return (   
     <section className={`${styles["techstack-container"]}`}>
        {technologies.map((technology, index) =>
-        <Card key={technology.id} indexAnim={index} value={technology}/>)}
+        <Card key={technology.id} indexAnim={index} value={technology}/>)}       
     </section>
   )
 }
