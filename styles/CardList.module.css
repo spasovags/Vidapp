@@ -1,7 +1,9 @@
 .techstack-container{
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
     margin: 0 0px;
-    position: relative;
 }
 
   @keyframes shine {

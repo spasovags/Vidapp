@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../public/favicon.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+
 
 const Navbar = () => {
   
@@ -27,9 +30,7 @@ const Navbar = () => {
           </Link>
           <div href="#" className={hambClassname} 
           onClick={() => {setIsModal(!isModal); setIsActive(!isActive)}}>
-            <span className={`${styles["span-top"]}`}></span>
-            <span className={`${styles["span-middle"]}`}></span>
-            <span className={`${styles["span-bottom"]}`}></span>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
         </div>
         <ul className={contentClassname}>

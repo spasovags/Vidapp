@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import CardList from '../components/CardList'
-import Header from '../components/Header'
 import useSWR from 'swr'
 
 const fetcher = (url) => fetch(url).then((res) => res.json());

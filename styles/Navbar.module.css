@@ -4,10 +4,11 @@
     list-style: none;
   }
   .nav-background {
-    background-color: var(--brand);
+    background: transparent;
     font-family: 'Stick No Bills', sans-serif;    
     width: 100%;
-    position: sticky;
+    
+    position: absolute;
     top: 0;
     z-index: 10000;
   }

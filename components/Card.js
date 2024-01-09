@@ -12,9 +12,8 @@ const Card = (props) => {
 
   return (
       <div 
-      className={`${styles["card"]}
-    ${IsCardsVisible ? `${styles[`${cardAnim}`]}` : ""}`}
-          ref={cardRef} >
+      className={`${styles["card"]}`}
+      >
       
         <div className={`${styles["photoCont"]}`} >
           <div className={`${styles["photoCard"]}`} >
