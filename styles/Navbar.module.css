@@ -1,23 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@500&display=swap');
 
-.menu-li{
-    list-style: none;
-  }
-  .nav-background {
+.nav-background {
     background: transparent;
     font-family: 'Stick No Bills', sans-serif;    
-    width: 100%;
-    
+    width: 100%;   
     position: absolute;
     top: 0;
     z-index: 10000;
   }
-    .navbar-container {
+.navbar-container {
+      font-size: x-large;
+      color: white;
       padding:0em 0.3em;
       display: flex;
       flex-direction: column;
-    }
-    .nav-links-container {
+}
+.nav-links-container {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -29,28 +26,42 @@
       text-align: center;
       transition: 0.3s;
   
-    }
-    .hideMenu {
-      left: 0px;
-    }
-    .logo-close-container {
+}
+.logo-close-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
-    }
-    .logo-close-container img{
+}
+.logo-close-container img{
       cursor: pointer;
-    }
-    .logo-close-container a{
+}
+.logo-close-container a{
      display: flex;
      align-items: center;
-    }
-    /* hamburger menu */
+}
+/* following and for you */
+.following-foryou-container button{
+  color: rgba(220, 216, 216, 0.8);
+  background-color: transparent;
+  border-style: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.following-foryou-container button:nth-child(2){
+  color: white;
+  background-color: transparent;
+  border-style: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* hamburger menu */
     .icon {
       display: block;
     }
-    .menu-container{
+    .search-container{
       width: 35px;
       height: 30px;
       margin: 10px 10px;
@@ -58,75 +69,9 @@
       cursor: pointer;
       display: inline-block;
     }
-    .menu-container span{
-      background-image: linear-gradient(to right, white , var(--brand), white);
-      position: absolute;
-      border-radius: 2px;
-      transition: .3s cubic-bezier(.8, .5, .2, 1.4);
-      width:100%;
-      height: 4px;
-    }
-    .menu-container span:nth-child(1){
-      top:0px;
-      left: 0px;
-    }
-    .menu-container span:nth-child(2){
-      top:13px;
-      left: 0px;
-    }
-    .menu-container span:nth-child(3){
-      bottom:0px;
-      left: 0px;
-    }
-    .menu-container:not(.active):hover span:nth-child(1){
-      transform: scaleX(1.4);
-    }
-    .menu-container:not(.active):hover span:nth-child(2){
-      transform: scaleX(1.6);
-    }
-    .menu-container:not(.active):hover span:nth-child(3){
-      transform: scaleX(1.4);
-    }
-    .menu-container.active span:nth-child(1){
-      top: 10px;
-      transform: scaleX(1.4);
-    }
-    .menu-container.active span:nth-child(2){
-      top: 13px;
-      transform: scaleX(1.6);
-    }
-    .menu-container.active span:nth-child(3){
-      top: 16px;
-      transform: scaleX(1.4);
-    }
   
     /* end of hamburger menu */
-    
-   .menu-link {
-      width: 100%;
-      display: inline-block;
-      background: var(--brand);
-      color: var(--text2);
-      padding: 16px 0px;
-      font-size: 16px;
-      cursor: pointer;
-      border-style: none;
-      font-size:x-large;
-    }
-    .menu-link:hover {
-      color: var(--text3);
-      background: var(--surface1);
-    }
-    
-    .menu-li {
-      position: relative;
-      display: inline-block;
-    }
-    
-    
-    .menu-li-content {
-      display: none;
-    }
+
     @media screen and (min-width: 600px) {
       .icon {
         display: none;
@@ -137,28 +82,7 @@
         flex-direction: row;
         justify-content: space-between;
       }
-      .nav-links-container {
-        right: 0%;
-        position: initial;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-      }
-      .menu-li {
-        text-align: center;
-        position: relative;
-        display: inline-block;
-      }
-      .menu-link {
-        width: auto;
-        padding: 11px 10px;
-        color: var(--text2);
-        background-image: none;
-        background-color: var(--brand);
-      }
+
       
       .nav-background {
         background-color: var(--brand);
