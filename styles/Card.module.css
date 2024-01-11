@@ -37,8 +37,6 @@
 }
 .photoCard img{
   width: auto;
-  border-radius: 10px;
-
 }
 .cardAnim{
   opacity: 0;

@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
 
 .nav-background {
     background: transparent;
-    font-family: 'Stick No Bills', sans-serif;    
     width: 100%;   
     position: absolute;
     top: 0;
@@ -42,7 +42,8 @@
 }
 /* following and for you */
 .following-foryou-container button{
-  color: rgba(220, 216, 216, 0.8);
+  font-family:  'Maven Pro', sans-serif;    
+  color: rgba(220, 216, 216);
   background-color: transparent;
   border-style: none;
   font-size: 1rem;

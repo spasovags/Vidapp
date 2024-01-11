@@ -7,21 +7,18 @@ const Card = (props) => {
   const post = props.value;
   const cardAnim = "cardAnim";
   
-  const basePath = '/images'
+  const basePath = '/videos'
   const { ref: cardRef, inView: IsCardsVisible } = useInView({triggerOnce: true, threshold:0.2});
 
   return (
       <div 
       className={`${styles["card"]}`}
-      >
-      
+      >     
         <div className={`${styles["photoCont"]}`} >
           <div className={`${styles["photoCard"]}`} >
-           <Image 
-           src={`${basePath}/${post.photo}`} 
-           objectFit='cover'
-           alt={post.alt}
-           layout="fill"/>
+           <video autoPlay loop>
+              <source src={`${basePath}/${post.vid}`} />
+           </video>
          </div>           
         </div>    
         <div className={`${styles["text-card"]}`} >
