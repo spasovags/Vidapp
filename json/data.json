@@ -1,33 +1,37 @@
 [
     {
       "id": 1,
-      "vid": "1.png",
+      "vid": "1.mp4",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 2,
-      "vid": "3.png",      
+      "vid": "2.mp4",      
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {  
       "id": 3,
-      "vid": "4.png",      
+      "vid": "3.mp4",      
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 4,
-      "vid": "5.png",      
+      "vid": "4.mp4",      
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 5,
-      "vid": "6.png",      
+      "vid": "5.mp4",      
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 6,
-      "vid": "7.png",      
+      "vid": "6.mp4",      
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
+    },
+    {
+      "id": 7,
+      "vid": "7.mp4",      
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     }
-
 ]

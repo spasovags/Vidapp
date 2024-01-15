@@ -1,9 +1,9 @@
 .techstack-container{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    margin: 0 0px;
+    margin: 0;
 }
 
   @keyframes shine {
@@ -16,10 +16,10 @@
   }
 
 /*media queries*/
-  @media screen and (min-width: 768px) {
+ /* @media screen and (min-width: 768px) {
     .techstack-container{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
-  }
+  }*/
    

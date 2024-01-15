@@ -14,16 +14,25 @@ const Card = (props) => {
       <div 
       className={`${styles["card"]}`}
       >     
-        <div className={`${styles["photoCont"]}`} >
-          <div className={`${styles["photoCard"]}`} >
-           <video autoPlay loop>
-              <source src={`${basePath}/${post.vid}`} />
+        <video autoPlay controls loop muted>
+              <source src={`${basePath}/${post.vid}`}
+              type="video/mp4" />
+        </video>
+        <div className={`${styles["controls-container"]}`} >
+           <p>{post.description}</p>
+        </div>
+     {/*  <div className={`${styles["photoCont"]}`} >
+         <div className={`${styles["photoCard"]}`} >
+           <video autoPlay controls loop muted>
+              <source src={`${basePath}/${post.vid}`}
+              type="video/mp4"
+              />
            </video>
          </div>           
         </div>    
         <div className={`${styles["text-card"]}`} >
            <p>{post.description}</p>
-        </div>   
+  </div> */} 
       </div>
    );
 }
