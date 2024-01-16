@@ -2,9 +2,10 @@
 
 .card {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     scroll-snap-align: start;
-    background-color: black;  
+    background-color: black; 
+    position: relative;
     /*display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,16 +16,35 @@
   max-height: 90vh;
   object-fit: scale-down;
 }
-.controls {
-  	overflow:hidden;
-    	background:transparent;
-      	width:100%;
-        	height:8.0971659919028340080971659919028%; /* of figure's height */
-          	position:relative;
+.controls-container {
+    background:transparent;   
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: 100;
+}
+.controls-likes{
+  position: relative;
+}
+.controls-likes p{
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 0; 
+  margin: 1em; 
+  margin-right: 2em;
+  text-shadow: 3px 3px 3px rgba(65,52,61,0.37);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  text-overflow: ellipsis;
 }
 .text-card {
   font-family: 'Stick No Bills', sans-serif;    
-  color: var(--brand);
+  color: white;
   margin: 0px 0.5em 0.7em;
   
 }

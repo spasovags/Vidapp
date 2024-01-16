@@ -19,7 +19,9 @@ const Card = (props) => {
               type="video/mp4" />
         </video>
         <div className={`${styles["controls-container"]}`} >
-           <p>{post.description}</p>
+          <div className={`${styles["controls-likes"]}`} >
+            <p>{post.description}</p>
+          </div>
         </div>
      {/*  <div className={`${styles["photoCont"]}`} >
          <div className={`${styles["photoCard"]}`} >

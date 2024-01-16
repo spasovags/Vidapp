@@ -17,7 +17,23 @@ const Footer = () => {
 
   return (
     <div className={`${styles["footer-container"]}`} >
-      <div className={`${styles["footer-sm-icons"]} 
+      <div className={`${styles["icon-other-info"]}`} >
+        <p>Home</p>
+      </div>
+      <div className={`${styles["icon-other-info"]}`} >
+        <p>Friends</p>
+      </div>
+      <div className={`${styles["icon-other-info"]}`} >
+
+      </div>
+      <div className={`${styles["icon-other-info"]}`} >
+        <p>Inbox</p>
+      </div>
+      <div className={`${styles["icon-other-info"]}`} >
+        <p>Profile</p>
+      </div>
+
+     {/* <div className={`${styles["footer-sm-icons"]} 
       ${IsIconVisible ? `${styles["iconAnim"]}` : ""}`}
         ref={cardRef} >
        <FontAwesomeIcon
@@ -57,6 +73,7 @@ const Footer = () => {
           </div> 
          </fieldset>            
        </form> 
+  */}
     </div>      
   )
 }
