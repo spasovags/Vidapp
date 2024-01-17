@@ -20,16 +20,16 @@ const Footer = () => {
       <div className={`${styles["icon-other-info"]}`} >
         <p>Home</p>
       </div>
-      <div className={`${styles["icon-other-info"]}`} >
+      <div className={`${styles["footer-icon"]}`} >
         <p>Friends</p>
       </div>
-      <div className={`${styles["icon-other-info"]}`} >
+      <div className={`${styles["footer-icon"]}`} >
 
       </div>
-      <div className={`${styles["icon-other-info"]}`} >
+      <div className={`${styles["footer-icon"]}`} >
         <p>Inbox</p>
       </div>
-      <div className={`${styles["icon-other-info"]}`} >
+      <div className={`${styles["footer-icon"]}`} >
         <p>Profile</p>
       </div>
 
