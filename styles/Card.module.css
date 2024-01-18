@@ -54,7 +54,12 @@
   justify-content: space-between;
 
 }
-
+.like span, .share span, .save span, .comment span{
+  font-size: 3rem;
+}
+.share span{
+  transform: rotate(90deg);
+}
 
 .text-card {
   font-family: 'Stick No Bills', sans-serif;    
