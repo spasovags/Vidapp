@@ -4,6 +4,7 @@ import styles from '../styles/Card.module.css'
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
+import profilePic from './profpics/profpic1.png'
 
 const Card = (props) => {
   const post = props.value;
@@ -27,25 +28,31 @@ const Card = (props) => {
         </div>
         <div className={`${styles["interactions"]}`} >
           <div className={`${styles["prof-icon"]}`} >
+            <Image
+                  src={profilePic}
+                      width={50}
+                      height={50}
+                      alt="Picture of the author"
+            />
             <p>profpic</p>
           </div>
-          <div className={`${styles["like"]}`} >
+          <div className={`${styles["like"]} ${styles["icon-vid"]}` } >
             <span class="material-symbols-outlined">
               favorite
               </span>
             <p>5688</p>
           </div>
-          <div className={`${styles["comment"]}`} >
+          <div className={`${styles["comment"]} ${styles["icon-vid"]}` } >
           <FontAwesomeIcon icon={faCommentDots} />
           <p>8900</p>
           </div>
-          <div className={`${styles["save"]}`} >
+          <div className={`${styles["save"]} ${styles["icon-vid"]}` } >
             <span class="material-symbols-outlined">
               bookmark
               </span>
             <p>9987</p>
           </div>
-          <div className={`${styles["share"]}`} >
+          <div className={`${styles["share"]} ${styles["icon-vid"]}` } >
             <span class="material-symbols-outlined">
               switch_access_shortcut
               </span>
@@ -55,20 +62,7 @@ const Card = (props) => {
             <p>sound</p>
           </div>
         </div>
-         
-     {/*  <div className={`${styles["photoCont"]}`} >
-         <div className={`${styles["photoCard"]}`} >
-           <video autoPlay controls loop muted>
-              <source src={`${basePath}/${post.vid}`}
-              type="video/mp4"
-              />
-           </video>
-         </div>           
-        </div>    
-        <div className={`${styles["text-card"]}`} >
-           <p>{post.description}</p>
-  </div> */} 
-      </div>
+     </div>
    );
 }
 

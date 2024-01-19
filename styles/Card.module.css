@@ -52,10 +52,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 1em;
+  font-size: 1rem;
+}
+.icon-vid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+.icon-vid p {
+  margin: 0;
 
 }
-.like span, .share span, .save span, .comment span{
-  font-size: 3rem;
+.like span,
+.share span,
+.save span,
+.comment svg {
+  font-size: 2rem;
 }
 .share span{
   transform: rotate(90deg);
