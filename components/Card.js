@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
-import profilePic from './profpics/profpic1.png'
+import { faCommentDots, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
   const post = props.value;
@@ -30,11 +30,10 @@ const Card = (props) => {
           <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={profilePic}
-                      width={50}
-                      height={50}
-                      alt="Picture of the author"
+                  width={50}
+                     alt="Picture of the author"
             />
-            <p>profpic</p>
+            <FontAwesomeIcon icon={faCirclePlus} />
           </div>
           <div className={`${styles["like"]} ${styles["icon-vid"]}` } >
             <span class="material-symbols-outlined">
