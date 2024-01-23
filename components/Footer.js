@@ -1,7 +1,9 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useInView } from 'react-intersection-observer';
+import profilePic from '../public/profpics/profpic1.png'
 
 // import the icons you need
 import {
@@ -16,22 +18,47 @@ const Footer = () => {
   const { ref: formRef, inView: IsFormVisible } = useInView({threshold:0.5});
 
   return (
-    <div className={`${styles["footer-container"]}`} >
-      <div className={`${styles["icon-other-info"]}`} >
-        <p>Home</p>
-      </div>
-      <div className={`${styles["footer-icon"]}`} >
-        <p>Friends</p>
-      </div>
-      <div className={`${styles["footer-icon"]}`} >
-
-      </div>
-      <div className={`${styles["footer-icon"]}`} >
-        <p>Inbox</p>
-      </div>
-      <div className={`${styles["footer-icon"]}`} >
-        <p>Profile</p>
-      </div>
+      <ul className={`${styles["footer-container"]}`}>
+        <li className={`${styles["icon-other-info"]}`}>
+         <Image
+            src={profilePic}
+            width={50}
+            alt="Picture of the author"
+          />
+          <Link href="/">Home</Link>
+        </li>
+        <li className={`${styles["footer-icon"]}`}>
+          <Image
+            src={profilePic}
+            width={50}
+            alt="Picture of the author"
+          />
+          <Link href="/friends">Friends</Link>
+        </li>
+        <li className={`${styles["footer-icon"]}`}>
+          <Image
+            src={profilePic}
+            width={50}
+            alt="Picture of the author"
+          />
+          <Link href="/add">add</Link>
+        </li>
+        <li className={`${styles["footer-icon"]}`}>
+          <Image
+            src={profilePic}
+            width={50}
+            alt="Picture of the author"
+          />
+          <Link href="/inbox">Inbox</Link>
+        </li>
+        <li className={`${styles["footer-icon"]}`}>
+          <Image
+            src={profilePic}
+            width={50}
+            alt="Picture of the author"
+          />
+          <Link href="/profile">Profile</Link>
+        </li>    
 
      {/* <div className={`${styles["footer-sm-icons"]} 
       ${IsIconVisible ? `${styles["iconAnim"]}` : ""}`}
@@ -74,7 +101,7 @@ const Footer = () => {
          </fieldset>            
        </form> 
   */}
-    </div>      
+   </ul>
   )
 }
 
