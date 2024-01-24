@@ -30,6 +30,7 @@
   color: white;
   margin-right: 4em;
   margin-left: 1em;
+  margin-bottom: 0.5em;
   display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

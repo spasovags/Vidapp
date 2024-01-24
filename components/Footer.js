@@ -1,11 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Footer.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useInView } from 'react-intersection-observer';
-import profilePic from '../public/profpics/profpic1.png'
+import home from "../public/footerIcons/Home.jpg"
+import friends from "../public/footerIcons/Friends.jpg"
+import add from "../public/footerIcons/Add.jpg"
+import inbox from "../public/footerIcons/Inbox.jpg"
+import profile from "../public/footerIcons/Profile.jpg"
 
-// import the icons you need
 import {
   faLinkedin,
   faGithub,
@@ -16,46 +20,51 @@ import {
 const Footer = () => {
   const { ref: cardRef, inView: IsIconVisible } = useInView({threshold:0.1});
   const { ref: formRef, inView: IsFormVisible } = useInView({threshold:0.5});
+  const footerWidth = 30;
+  const footerHeight = 30;
+  const addWidth = 60;
 
   return (
       <ul className={`${styles["footer-container"]}`}>
-        <li className={`${styles["icon-other-info"]}`}>
-         <Image
-            src={profilePic}
-            width={50}
-            alt="Picture of the author"
+        <li className={`${styles["footer-icon"]}`}>
+          <Link className={`${styles["home-button"]}`} href="/">
+          <Image
+            src={home}
+            width={footerWidth}
+            height={footerHeight}
+            alt="Home page"
           />
+          </Link>
           <Link href="/">Home</Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
           <Image
-            src={profilePic}
-            width={50}
-            alt="Picture of the author"
+            src={friends}
+            width={footerWidth}
+            alt="Friends"
           />
           <Link href="/friends">Friends</Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
           <Image
-            src={profilePic}
-            width={50}
-            alt="Picture of the author"
+            src={add}
+            width={addWidth}
+            alt="Post"
           />
-          <Link href="/add">add</Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
           <Image
-            src={profilePic}
-            width={50}
-            alt="Picture of the author"
+            src={inbox}
+            width={footerWidth}
+            alt="Inbox"
           />
           <Link href="/inbox">Inbox</Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
           <Image
-            src={profilePic}
-            width={50}
-            alt="Picture of the author"
+            src={profile}
+            width={footerWidth}
+            alt="Your profile"
           />
           <Link href="/profile">Profile</Link>
         </li>    
