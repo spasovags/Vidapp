@@ -21,16 +21,15 @@ const Footer = () => {
   const { ref: cardRef, inView: IsIconVisible } = useInView({threshold:0.1});
   const { ref: formRef, inView: IsFormVisible } = useInView({threshold:0.5});
   const footerWidth = 30;
-  const footerHeight = 30;
+  const footerHeight = 26;
   const addWidth = 60;
 
   return (
       <ul className={`${styles["footer-container"]}`}>
         <li className={`${styles["footer-icon"]}`}>
-          <Link className={`${styles["home-button"]}`} href="/">
+          <Link href="/">
           <Image
             src={home}
-            width={footerWidth}
             height={footerHeight}
             alt="Home page"
           />
@@ -38,34 +37,42 @@ const Footer = () => {
           <Link href="/">Home</Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
-          <Image
-            src={friends}
-            width={footerWidth}
-            alt="Friends"
-          />
+          <Link href="/friends">
+            <Image
+              src={friends}
+              height={footerHeight}
+              alt="Friends"
+            />
+          </Link>
           <Link href="/friends">Friends</Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
-          <Image
-            src={add}
-            width={addWidth}
-            alt="Post"
-          />
+          <Link href="/add">
+            <Image
+              src={add}
+              width={addWidth}
+              alt="Post"
+            />
+          </Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
-          <Image
-            src={inbox}
-            width={footerWidth}
-            alt="Inbox"
-          />
+          <Link href="/inbox">
+            <Image
+              src={inbox}
+              height={footerHeight}
+              alt="Inbox"
+            />
+          </Link>
           <Link href="/inbox">Inbox</Link>
         </li>
         <li className={`${styles["footer-icon"]}`}>
-          <Image
-            src={profile}
-            width={footerWidth}
-            alt="Your profile"
-          />
+          <Link href="/profile">
+            <Image
+              src={profile}
+              height={footerHeight}
+              alt="Your profile"
+            />
+          </Link>
           <Link href="/profile">Profile</Link>
         </li>    
 

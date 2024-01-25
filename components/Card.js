@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { useInView } from 'react-intersection-observer';
@@ -8,19 +8,32 @@ import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
   const post = props.value;
-  const cardAnim = "cardAnim";
-  
-  const basePath = '/videos'
-  const { ref: cardRef, inView: IsCardsVisible } = useInView({triggerOnce: true, threshold:0.2});
+  const basePath = '/videos';
+  const toggleIsPaused = () => {
+      setIsPaused((current) => !current);
+        };
+  const [isPaused, setIsPaused] = useState(false);
+  const vid = document.getElementById("currVid"); 
+  const pauseVideo = () => {
+    if(isPaused){
+      vid.pause(); 
+    } else {
+       vid.play();
+    }
+    toggleIsPaused();
+  };
 
   return (
       <div 
       className={`${styles["card"]}`}
       >     
-        <video autoPlay controls loop muted>
+        <video id='currVid' autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
         </video>
+        <button
+        className={`${styles["buttonPause"]}`}
+        onClick={pauseVideo}>pause</button>
         <div className={`${styles["controls-container"]}`} >
           <div className={`${styles["title-descr"]}`} >
             <p>{post.description}</p>
@@ -31,7 +44,7 @@ const Card = (props) => {
             <Image
                   src={profilePic}
                   width={50}
-                     alt="Picture of the author"
+                  alt="Picture of the author"
             />
             <FontAwesomeIcon icon={faCirclePlus} />
           </div>
