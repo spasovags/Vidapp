@@ -8,26 +8,31 @@ import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
   const post = props.value;
+  const idv =`currVid_${post.id}`;
+  console.log('idv ',idv)
+
   const basePath = '/videos';
   const toggleIsPaused = () => {
       setIsPaused((current) => !current);
         };
   const [isPaused, setIsPaused] = useState(false);
-  const vid = document.getElementById("currVid"); 
+  const vid = document.querySelector(`#${idv}`); 
+  console.log("post.vid ", post.vid);
   const pauseVideo = () => {
-    if(isPaused){
+    if(isPaused && vid){
       vid.pause(); 
-    } else {
+    } else if(vid){
+      console.log("current vid", vid)
        vid.play();
     }
     toggleIsPaused();
   };
-
+  
   return (
       <div 
       className={`${styles["card"]}`}
       >     
-        <video id='currVid' autoPlay loop muted>
+        <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
         </video>
