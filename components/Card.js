@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
-import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentDots, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
@@ -18,19 +17,13 @@ const Card = (props) => {
 
   const pauseVideo = () => {
     const vid = document.querySelector(`#${idv}`); 
-    console.log("document.querySelector", vid)
-
-    console.log("button pause clicked", vid)
-    console.log("idv, vid id- ", idv)
-
+    
     if(isPlaying && vid){     
       vid.pause(); 
       toggleIsPlaying();
-      console.log('vid paused- ', vid)
     } else if(vid){
        vid.play();
        toggleIsPlaying();
-       console.log("vid played- ", vid)
     }
    
   };
@@ -48,7 +41,11 @@ const Card = (props) => {
         onClick={pauseVideo}>pause</button>
         <div className={`${styles["controls-container"]}`} >
           <div className={`${styles["title-descr"]}`} >
-            <p>{post.description}</p>
+            <p>{post.username}</p>
+            <p>{post.description}</p>    
+            <p className={`${styles["search-help"]}`}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              Search• lorem ipsum</p>
           </div> 
         </div>
         <div className={`${styles["interactions"]}`} >
@@ -83,7 +80,7 @@ const Card = (props) => {
             <p>77</p>
           </div>
           <div className={`${styles["sound"]}`} >
-            <p>sound</p>
+            <FontAwesomeIcon icon={faVolumeXmark} />
           </div>
         </div>
      </div>
