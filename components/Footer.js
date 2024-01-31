@@ -18,8 +18,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const { ref: cardRef, inView: IsIconVisible } = useInView({threshold:0.1});
-  const { ref: formRef, inView: IsFormVisible } = useInView({threshold:0.5});
   const footerWidth = 30;
   const footerHeight = 26;
   const addWidth = 60;

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
@@ -42,10 +42,14 @@ const Card = (props) => {
         <div className={`${styles["controls-container"]}`} >
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
-            <p>{post.description}</p>    
-            <p className={`${styles["search-help"]}`}>
+            <p className={`${styles["descr"]}`}>
+              {post.description}
+            </p>    
+            <div className={`${styles["search-help"]}`}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
-              Search• lorem ipsum</p>
+              <p> Search • lorem ipsum lorem</p>
+              <FontAwesomeIcon icon={faAngleRight} />
+            </div>
           </div> 
         </div>
         <div className={`${styles["interactions"]}`} >
