@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
@@ -38,7 +38,9 @@ const Card = (props) => {
         </video>
         <button
         className={`${styles["buttonPause"]}`}
-        onClick={pauseVideo}>pause</button>
+        onClick={pauseVideo}>
+          <FontAwesomeIcon icon={faPlay} />
+        </button>
         <div className={`${styles["controls-container"]}`} >
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
@@ -56,7 +58,7 @@ const Card = (props) => {
           <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={profilePic}
-                  width={50}
+                  width={40}
                   alt="Picture of the author"
             />
             <FontAwesomeIcon icon={faCirclePlus} />
