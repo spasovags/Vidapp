@@ -30,14 +30,15 @@ const Card = (props) => {
   
   return (
       <div 
-      className={`${styles["card"]}`}
+   className={`${styles["card"]}`}
       >     
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
         </video>
         <button
-        className={`${styles["buttonPause"]}`}
+        className={`${styles["buttonPause"]} 
+        ${ isPlaying ? "" : `${styles["showButtonPause"]}` }`}
         onClick={pauseVideo}>
           <FontAwesomeIcon icon={faPlay} />
         </button>
