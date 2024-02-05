@@ -2,18 +2,19 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass, faL } from '@fortawesome/free-solid-svg-icons'
 import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
   const post = props.value;
   const idv =`currVid_${post.id}`;
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isLiked, setIsLiked] = useState(false);
 
   const basePath = '/videos';
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
-        };
-  const [isPlaying, setIsPlaying] = useState(true);
+  };
 
   const pauseVideo = () => {
     const vid = document.querySelector(`#${idv}`); 
@@ -27,7 +28,10 @@ const Card = (props) => {
     }
    
   };
-  
+  const toggleLikeVideo = () => {
+    setIsLiked((current) => !current);  
+  };
+
   return (
       <div 
    className={`${styles["card"]}`}
@@ -65,25 +69,35 @@ const Card = (props) => {
             <FontAwesomeIcon icon={faCirclePlus} />
           </div>
           <div className={`${styles["like"]} ${styles["icon-vid"]}` } >
-            <span class="material-symbols-outlined">
+           <button className={`${styles["buttonInteractions"]}
+                   ${ isLiked ? `${styles["videoLiked"]}` : "" }`}
+              onClick={toggleLikeVideo}>
+              <span class="material-symbols-outlined">
               favorite
               </span>
-            <p>5688</p>
+           </button>
+           <p>5688</p>
           </div>
           <div className={`${styles["comment"]} ${styles["icon-vid"]}` } >
-          <FontAwesomeIcon icon={faCommentDots} />
+           <button className={`${styles["buttonInteractions"]}` } >
+            <FontAwesomeIcon icon={faCommentDots} />
+           </button>
           <p>8900</p>
           </div>
           <div className={`${styles["save"]} ${styles["icon-vid"]}` } >
-            <span class="material-symbols-outlined">
+           <button className={`${styles["buttonInteractions"]}` } > 
+             <span class="material-symbols-outlined">
               bookmark
-              </span>
-            <p>9987</p>
+             </span>
+           </button>  
+           <p>9987</p>
           </div>
           <div className={`${styles["share"]} ${styles["icon-vid"]}` } >
-            <span class="material-symbols-outlined">
+           <button className={`${styles["buttonInteractions"]}` } >
+             <span class="material-symbols-outlined">
               switch_access_shortcut
-              </span>
+             </span>
+            </button>
             <p>77</p>
           </div>
           <div className={`${styles["sound"]}`} >

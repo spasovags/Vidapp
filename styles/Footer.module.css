@@ -31,64 +31,6 @@
 
 
 
-.footer-sm-icons{
-    font-size:xx-large;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 0px;
-    position: relative;
-    left: -90%;
-    width: 100%;
-}
-.footer-sm-icons svg{
-    margin: 10px;
-    cursor: pointer;
-    padding: 0px 0.2em;
-}
-.iconYoutube:hover{
-  color: red;
-}
-.iconLinkedin:hover{
-    color: steelblue;
-}
-.iconGithub:hover{
-    color: #ed34d2;
-}
-.iconDev:hover{
-      color: #14ff;
-}
-.iconAnim{
-    animation: smIconAnim 25s linear infinite;
-}
-
-@keyframes smIconAnim {
-    from {
-        left: -90%;
-        color: white;
-    }
-    to {
-        left: 100%;
-        color: var(--brand);
-    }
-}
-
-.footer-form{
-    margin-bottom: 3em;
-    font-family: 'Stick No Bills', sans-serif;    
-    color: var(--text-footer);
-    font-size: large;
-}
-.footer-typetext{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;   
-}
-.footer-typetext label{
-    margin-top: 1em;
-}
 .footer-typetext input[type=text]{
     padding: 0.5em;
     display: inline-block;
@@ -98,72 +40,9 @@
     border-radius: 4px;
 
   }
-.footer-typetext input[type=submit] {
-    width: 100%;
-    font-size:x-large;
-    font-family: 'Stick No Bills', sans-serif;  
-    background-color: var(--brand);
-    color: var(--text-footer);
-    margin: 1em 0;
-    cursor: pointer;
-    border-radius: 10px;
-    letter-spacing: 0.1em;
-  }
-  
-.footer-form input[type=submit]:hover {
-    color: var(--text3);
-    background: var(--surface1);
-}
-.footer-radio{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-items: start;
-    align-content: center;
-    gap: 0.2em;
-    margin-bottom: 1em;
-}
-.footer-radio p{
-    grid-column: 1/3;
-    text-align: center;
-    margin: 0.3em auto;
-}
-.footer-form input[type=radio] {
-    margin-top: 0;
-}
-.footer-form fieldset{
-    border-radius: 10px;
-    box-shadow: 20px 20px 10em white, 20px 20px 10em white;
-}
-.formAnims{
-    animation-name: formAnims;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-  @keyframes formAnims{
-    from {
-      opacity: 0;
-      box-shadow: 20px 20px 10em white;
-    }
-  
-    to {
-      opacity: 1;
-      box-shadow: 3px 3px 1em var(--brand), 3px 3px 1em var(--surface1);
-    }
-  }
 
-.footer-fieldset{
-    display: flex; 
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;     
-}
 
 /*media queries*/
 @media (min-width: 600px) {
-    .footer-fieldset{
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 5em;     
-    }
+
 }

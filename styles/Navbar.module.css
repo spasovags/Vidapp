@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
 
 .nav-background {
     background: transparent;
@@ -10,7 +9,7 @@
 .navbar-container {
       font-size: x-large;
       color: white;
-      padding:0em 0.3em;
+      padding: 0em 1em;
       display: flex;
       flex-direction: column;
 }
@@ -63,9 +62,7 @@
       display: block;
     }
     .search-container{
-      width: 35px;
       height: 30px;
-      margin: 10px 10px;
       position: relative;
       cursor: pointer;
       display: inline-block;
@@ -85,14 +82,10 @@
       }
 
       
-      .nav-background {
-        background-color: var(--brand);
-      }
+
     }
     
     @media screen and (min-width: 768px) {
-      .navbar-container {
-        margin: 0px 1.5rem;
-      }
+
     }
     

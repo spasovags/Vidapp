@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@500&display=swap');
 
 .card {
     width: 100%;
@@ -49,12 +48,19 @@
   margin-right: 4em;
   margin-left: 1.2em;
 }
+.title-descr p:first-child{
+  font-weight: bold;
+  margin-bottom: 0;
+}
 .title-descr .descr{
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 1.5em;
+  line-height: 1.4em;
+}
+.descr{
+  margin-top: 0.5em;
 }
 .search-help svg:first-child{
   margin-right: 0.3em;
@@ -78,7 +84,6 @@
 
 .interactions {
   position: absolute;
-  color: white;
   bottom: 25px;
   right: 0; 
   margin-bottom: 1em;
@@ -90,8 +95,21 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 1em;
-  font-size: 1rem;
   z-index: 1003;
+  color: white;
+}
+.buttonInteractions{
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  font-size: 2rem;
+}
+.buttonInteractions span,
+.buttonInteractions svg{
+  font-size: 2rem;
+}
+.videoLiked{
+  color: red;
 }
 .prof-icon{
   position: relative;
@@ -120,14 +138,10 @@
 .icon-vid p {
   margin: 0;
 }
-.like span,
-.share span,
-.save span,
-.comment svg{
-  font-size: 2rem;
-}
+
 .share span{
   transform: rotate(90deg);
+  font-weight: 900;
 }
 .sound svg {
   font-size: 1rem;
@@ -137,75 +151,11 @@
   padding: 0.6em;
 }
 
-
-
-
-.text-card {
-  font-family: 'Stick No Bills', sans-serif;    
-  color: white;
-  margin: 0px 0.5em 0.7em;
-  
-}
-.text-card p{
-  display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-top: 1em;
-    margin-bottom: 0px;
-    margin-left: 1em;
-    margin-right: 1em;
-}
-.photoCont{
-  width: 100%;
-}
-.photoCard {
-  width: 100%;
-  height: 500px;
-  margin: 0em;
-  position: relative;
-}
-.photoCard video{
-  object-fit: contain;
-}
-.cardAnim{
-  opacity: 0;
-  animation-name: cardAnims;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-@keyframes cardAnims{
-  from {
-    opacity: 0;
-    transform: scale(0.1);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-    }
-}
-
 /*media queries*/
 @media (min-width: 600px) {
-  .card{
-    margin: 3em;
-  }
-  .photoCard{
-   height: 250px;
-  }
-  .photoCont{
-    flex: 1;
-  }
-  .text-card{
-    flex: 1;
-  }
+
+
 }
 @media (min-width: 1000px) {
-  .card{
-   grid-template-columns: repeat(4, 1fr);
-  }
-  .photoCard{
-    height: 350px;
-  }
+
 }
