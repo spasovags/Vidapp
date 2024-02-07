@@ -3,72 +3,84 @@
       "id": 1,
       "vid": "1.mp4",
       "username": "Jill",
+      "profpic": "profpic1.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 2,
       "vid": "2.mp4", 
       "username": "Plaine j",
+      "profpic": "profpic2.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {  
       "id": 3,
       "vid": "3.mp4", 
       "username": "Gyit",
+      "profpic": "profpic3.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 4,
       "vid": "4.mp4",  
       "username": "Fabal",
+      "profpic": "profpic4.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 5,
       "vid": "5.mp4",  
       "username": "Whaterver",
+      "profpic": "profpic5.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 6,
       "vid": "6.mp4",   
       "username": "Myusername",
+      "profpic": "profpic6.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 7,
       "vid": "7.mp4",  
       "username": "Nop133",
+      "profpic": "profpic7.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 8,
       "vid": "8.mp4", 
       "username": "Celeb2467",
+      "profpic": "profpic8.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 9,
       "vid": "9.mp4", 
       "username": "celeb76555",
+      "profpic": "profpic9.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 10,
       "vid": "10.mp4", 
       "username": "popstats",
+      "profpic": "profpic10.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 11,
       "vid": "11.mp4",  
-      "username": "dump",
+      "username": "dumpst",
+      "profpic": "profpic11.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     },
     {
       "id": 12,
       "vid": "12.mp4", 
       "username": "ms loren",
+      "profpic": "profpic12.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste, ut natus, consectetur nobis dignissimos nostrum accusantium, est doloribus totam qui ratione sint laboriosam? Voluptatem perferendis dolor, nemo atque magnam fugiat non praesentium animi magni quia autem accusantium dignissimos dolor"
     }
 ]

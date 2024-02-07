@@ -10,8 +10,9 @@ const Card = (props) => {
   const idv =`currVid_${post.id}`;
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
-
   const basePath = '/videos';
+  const basePathProfpics = '/profpics';
+
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
   };
@@ -62,8 +63,9 @@ const Card = (props) => {
         <div className={`${styles["interactions"]}`} >
           <div className={`${styles["prof-icon"]}`} >
             <Image
-                  src={profilePic}
+                  src={`${basePathProfpics}/${post.profpic}`}
                   width={40}
+                  height={40}
                   alt="Picture of the author"
             />
             <FontAwesomeIcon icon={faCirclePlus} />
