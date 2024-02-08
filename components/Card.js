@@ -34,9 +34,7 @@ const Card = (props) => {
   };
 
   return (
-      <div 
-   className={`${styles["card"]}`}
-      >     
+      <div className={`${styles["card"]}`}>     
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
