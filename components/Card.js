@@ -76,13 +76,13 @@ const Card = (props) => {
               favorite
               </span>
            </button>
-           <p>5688</p>
+           <p>{post.likes}</p>
           </div>
           <div className={`${styles["comment"]} ${styles["icon-vid"]}` } >
            <button className={`${styles["buttonInteractions"]}` } >
             <FontAwesomeIcon icon={faCommentDots} />
            </button>
-          <p>8900</p>
+          <p>{post.comments}</p>
           </div>
           <div className={`${styles["save"]} ${styles["icon-vid"]}` } >
            <button className={`${styles["buttonInteractions"]}` } > 
@@ -90,7 +90,7 @@ const Card = (props) => {
               bookmark
              </span>
            </button>  
-           <p>9987</p>
+           <p>{post.saved}</p>
           </div>
           <div className={`${styles["share"]} ${styles["icon-vid"]}` } >
            <button className={`${styles["buttonInteractions"]}` } >
@@ -98,7 +98,7 @@ const Card = (props) => {
               switch_access_shortcut
              </span>
             </button>
-            <p>77</p>
+            <p>{post.shares}</p>
           </div>
           <div className={`${styles["sound"]}`} >
             <FontAwesomeIcon icon={faVolumeXmark} />
