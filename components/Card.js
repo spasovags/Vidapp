@@ -33,16 +33,21 @@ const Card = (props) => {
   const toggleLikeVideo = () => {
     setIsLiked((current) => !current);  
   };
+  const removebigRedLiked = () => {
+    const bigLike = document.querySelector(`#${idLike}`);
 
+    setTimeout(() => {
+      bigLike.classList.remove(`${styles["bigRedLiked"]}`)},    
+      4000);
+  };
   const handleDoubleClickLike = (event) => {
   
     const bigLike = document.querySelector(`#${idLike}`);
-    console.log("biglike: ", bigLike)
-    console.log("biglike classlist: ", bigLike.classList)
     bigLike.classList.add(`${styles["bigRedLiked"]}`);    
 
     bigLike.style.top = event.clientY + "px";
     bigLike.style.left = event.clientX + "px";
+    removebigRedLiked();
    };
 
   return (
