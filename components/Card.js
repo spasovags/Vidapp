@@ -8,6 +8,8 @@ import profilePic from '../public/profpics/profpic1.png'
 const Card = (props) => {
   const post = props.value;
   const idv =`currVid_${post.id}`;
+  const idLike = "bigLike";
+
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
@@ -27,14 +29,24 @@ const Card = (props) => {
        vid.play();
        toggleIsPlaying();
     }
-   
-  };
+ };
   const toggleLikeVideo = () => {
     setIsLiked((current) => !current);  
   };
 
+  const handleDoubleClickLike = (event) => {
+  
+    const bigLike = document.querySelector(`#${idLike}`);
+    console.log("biglike: ", bigLike)
+    console.log("biglike classlist: ", bigLike.classList)
+    bigLike.classList.add(`${styles["bigRedLiked"]}`);    
+
+    bigLike.style.top = event.clientY + "px";
+    bigLike.style.left = event.clientX + "px";
+   };
+
   return (
-      <div className={`${styles["card"]}`}>     
+      <div className={`${styles["card"]}`} id='cardID'>     
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
@@ -42,7 +54,8 @@ const Card = (props) => {
         <button
         className={`${styles["buttonPause"]} 
         ${ isPlaying ? "" : `${styles["showButtonPause"]}` }`}
-        onClick={pauseVideo}>
+        onClick={pauseVideo}
+        onDoubleClick={handleDoubleClickLike}>
           <FontAwesomeIcon icon={faPlay} />
         </button>
         <div className={`${styles["controls-container"]}`} >
@@ -93,7 +106,7 @@ const Card = (props) => {
            <p>{post.saved}</p>
           </div>
           <div className={`${styles["share"]} ${styles["icon-vid"]}` } >
-           <button className={`${styles["buttonInteractions"]}` } >
+            <button className={`${styles["buttonInteractions"]}` } >
              <span class="material-symbols-outlined">
               switch_access_shortcut
              </span>
@@ -104,6 +117,10 @@ const Card = (props) => {
             <FontAwesomeIcon icon={faVolumeXmark} />
           </div>
         </div>
+        <span class="material-symbols-outlined"
+        id={idLike}>
+          favorite
+        </span>
      </div>
    );
 }
