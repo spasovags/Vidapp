@@ -1,3 +1,10 @@
+:root{
+  --bigLikeY:  0px;
+  --bigLikeX:  0px;
+  --bigLikeNewY:  0px;
+ --blueLike: "white";
+
+}
 html,
 body {
   padding: 0;

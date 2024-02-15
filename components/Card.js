@@ -29,6 +29,7 @@ const Card = (props) => {
        vid.play();
        toggleIsPlaying();
     }
+
  };
   const toggleLikeVideo = () => {
     setIsLiked((current) => !current);  
@@ -38,15 +39,24 @@ const Card = (props) => {
 
     setTimeout(() => {
       bigLike.classList.remove(`${styles["bigRedLiked"]}`)},    
-      4000);
+      3000);
   };
   const handleDoubleClickLike = (event) => {
   
     const bigLike = document.querySelector(`#${idLike}`);
+
+    bigLike.style.left = event.clientX + "px";
+    const newPosi = event.clientY - 50;
+    const newPos = newPosi + "px";
+    const oldPos = event.clientY + "px";
+    console.log(oldPos);
+    console.log(newPos);
+    document.documentElement.style.setProperty('--bigLikeY', oldPos);
+
+    document.documentElement.style.setProperty('--bigLikeNewY', newPos);
+    
     bigLike.classList.add(`${styles["bigRedLiked"]}`);    
 
-    bigLike.style.top = event.clientY + "px";
-    bigLike.style.left = event.clientX + "px";
     removebigRedLiked();
    };
 

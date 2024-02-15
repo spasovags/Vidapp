@@ -21,14 +21,17 @@
   position: absolute;
   z-index: 1020;
   font-size: 1rem;
+  top: var(--bigLikeY);
   animation: likeAnim 3s;
 }
 @keyframes likeAnim {
     from {
       font-size: 1rem;
+      top: var(--bigLikeY);
     }
       to {
         font-size: 4rem;
+        top: var(--bigLikeNewY);
       }
 }
 .controls-container {
