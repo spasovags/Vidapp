@@ -46,7 +46,7 @@ const Card = (props) => {
     const bigLike = document.querySelector(`#${idLike}`);
 
     bigLike.style.left = event.clientX + "px";
-    const newPosi = event.clientY - 50;
+    const newPosi = event.clientY - 100;
     const newPos = newPosi + "px";
     const oldPos = event.clientY + "px";
     console.log(oldPos);

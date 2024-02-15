@@ -17,20 +17,25 @@
 }
 
 .bigRedLiked{
-  color: red;
+  /*color: #fe2c55;*/
+  background: -webkit-linear-gradient(45deg, #f84b6e, #fe2c55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
   z-index: 1020;
-  font-size: 1rem;
+  font-size: 6rem;
   top: var(--bigLikeY);
   animation: likeAnim 3s;
 }
 @keyframes likeAnim {
     from {
-      font-size: 1rem;
+      font-size: 6rem;
+      opacity: 1;
       top: var(--bigLikeY);
     }
       to {
-        font-size: 4rem;
+        font-size: 13rem;
+        opacity: 0;
         top: var(--bigLikeNewY);
       }
 }
@@ -129,7 +134,7 @@
   font-size: 2rem;
 }
 .videoLiked{
-  color: red;
+  color: #fe2c55;
 }
 .like .buttonInteractions span{
   font-size: 2.5rem;
@@ -143,7 +148,7 @@
 }
 .prof-icon svg{
   background-color: white;
-  color: red;
+  color: #fe2c55;
   font-size: 1.1em;
   position: absolute;
   left: 0;
