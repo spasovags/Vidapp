@@ -48,10 +48,10 @@ const Card = (props) => {
   const handleDoubleClickLike = (event) => {
     const bigLike = document.querySelector(`#${idLike}`);
 
-    const randSkew = getRandomInt(11);
-    console.log("rand num ", randSkew);
+    const randRotate = getRandomInt(11);
+    console.log("rand num ", randRotate);
 
-    switch (randSkew) {
+    switch (randRotate) {
       case 0, 1, 2, 3:
         bigLike.style.rotate="-30deg"; break;
       case 4, 5, 6, 7:
@@ -79,6 +79,7 @@ const Card = (props) => {
     bigLike.classList.add(`${styles["bigRedLiked"]}`);    
 
     removebigRedLiked();
+    setIsLiked(true);
    };
 
   return (
