@@ -41,16 +41,37 @@ const Card = (props) => {
       bigLike.classList.remove(`${styles["bigRedLiked"]}`)},    
       3000);
   };
-  const handleDoubleClickLike = (event) => {
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
   
+  const handleDoubleClickLike = (event) => {
     const bigLike = document.querySelector(`#${idLike}`);
 
-    bigLike.style.left = event.clientX + "px";
-    const newPosi = event.clientY - 100;
+    const randSkew = getRandomInt(11);
+    console.log("rand num ", randSkew);
+
+    switch (randSkew) {
+      case 0, 1, 2, 3:
+        bigLike.style.rotate="-30deg"; break;
+      case 4, 5, 6, 7:
+        bigLike.style.rotate="30deg"; break;
+      default:
+        bigLike.style.rotate="0";
+     }
+
+    const newPosiX = event.clientX - 60;
+    bigLike.style.left = newPosiX + "px";
+    
+    const newPosi = event.clientY - 130;
     const newPos = newPosi + "px";
-    const oldPos = event.clientY + "px";
-    console.log(oldPos);
-    console.log(newPos);
+    const oldPosi = event.clientY - 30;
+    const oldPos = oldPosi + "px";
+    
+    console.log("old position Y ", oldPos);
+    console.log("new position Y ", newPos);
+    console.log("new position X ", event.clientX);
+
     document.documentElement.style.setProperty('--bigLikeY', oldPos);
 
     document.documentElement.style.setProperty('--bigLikeNewY', newPos);
