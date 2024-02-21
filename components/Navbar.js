@@ -2,7 +2,7 @@ import styles from '../styles/Navbar.module.css'
 import { useState, useEffect } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from '../public/favicon.jpg'
+import logo from '../public/favicon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
