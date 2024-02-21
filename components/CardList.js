@@ -4,19 +4,11 @@ import styles from '../styles/CardList.module.css'
 
 
 const CardList = ({technologies}) => {
-  const inter = "sect";
-  const [scrolling, setScrolling] = useState(false);
-  const changeOpacity = () => {
-    setScrolling((current) => !current);
-  };
-  const setOpacityOne = () => {
-    setScrolling(false);
-  };
+
    return (   
-    <section className={`${styles["techstack-container"]}`}
-    onScroll={changeOpacity} onscrollend={setOpacityOne} id={inter}>
+    <section className={`${styles["techstack-container"]}`}>
        {technologies.map((technology, index) =>
-        <Card key={technology.id} scrolling={scrolling} indexAnim={index} value={technology}/>)}       
+        <Card key={technology.id} indexAnim={index} value={technology}/>)}       
     </section>
   )
 }

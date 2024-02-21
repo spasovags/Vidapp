@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,20 +8,11 @@ const Card = (props) => {
   const post = props.value;
   const idv =`currVid_${post.id}`;
   const idLike = `bigLike_${post.id}`;
-
+  
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
-
-
- /* useEffect(() => {
-  if (typeof window !== 'undefined') { 
-    console.log("useefect: ", window)
-
-    window.addEventListener('scroll', changeOpacity, { passive: true });
-  }
-  }, []);*/
 
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
@@ -111,8 +102,7 @@ const Card = (props) => {
             </div>
           </div> 
         </div>
-        <div className={`${styles["interactions"]}
-        ${ props.scrolling ? `${styles["newOpacity"]}` : "" }`}>
+        <div className={`${styles["interactions"]}`}>
         <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={`${basePathProfpics}/${post.profpic}`}
