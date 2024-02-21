@@ -3,17 +3,25 @@ import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass, faL } from '@fortawesome/free-solid-svg-icons'
-import profilePic from '../public/profpics/profpic1.png'
 
 const Card = (props) => {
   const post = props.value;
   const idv =`currVid_${post.id}`;
-  const idLike = "bigLike";
+  const idLike = `bigLike_${post.id}`;
 
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
+
+
+ /* useEffect(() => {
+  if (typeof window !== 'undefined') { 
+    console.log("useefect: ", window)
+
+    window.addEventListener('scroll', changeOpacity, { passive: true });
+  }
+  }, []);*/
 
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
@@ -49,7 +57,6 @@ const Card = (props) => {
     const bigLike = document.querySelector(`#${idLike}`);
 
     const randRotate = getRandomInt(11);
-    console.log("rand num ", randRotate);
 
     switch (randRotate) {
       case 0, 1, 2, 3:
@@ -68,10 +75,6 @@ const Card = (props) => {
     const oldPosi = event.clientY - 30;
     const oldPos = oldPosi + "px";
     
-    console.log("old position Y ", oldPos);
-    console.log("new position Y ", newPos);
-    console.log("new position X ", event.clientX);
-
     document.documentElement.style.setProperty('--bigLikeY', oldPos);
 
     document.documentElement.style.setProperty('--bigLikeNewY', newPos);
@@ -83,7 +86,7 @@ const Card = (props) => {
    };
 
   return (
-      <div className={`${styles["card"]}`} id='cardID'>     
+      <div className={`${styles["card"]}`}>     
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
@@ -108,8 +111,9 @@ const Card = (props) => {
             </div>
           </div> 
         </div>
-        <div className={`${styles["interactions"]}`} >
-          <div className={`${styles["prof-icon"]}`} >
+        <div className={`${styles["interactions"]}
+        ${ props.scrolling ? `${styles["newOpacity"]}` : "" }`}>
+        <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={`${basePathProfpics}/${post.profpic}`}
                   width={40}

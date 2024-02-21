@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: space-between;*/
 }
+
 .card video{
   width: 100%;
   max-height: 100%;
@@ -122,6 +123,11 @@
   z-index: 1003;
   color: white;
 }
+.newOpacity{
+  opacity: 0.5;
+}      
+
+
 .buttonInteractions{
   background-color: transparent;
   border-style: none;
