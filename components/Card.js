@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass, faL } from '@fortawesome/free-solid-svg-icons'
+import { motion } from "framer-motion";
 
 const Card = (props) => {
   const post = props.value;
@@ -102,8 +103,10 @@ const Card = (props) => {
             </div>
           </div> 
         </div>
-        <div className={`${styles["interactions"]}`}>
-        <div className={`${styles["prof-icon"]}`} >
+        <motion.div className={`${styles["interactions"]}`}
+          initial={{ opacity: 0.5 }}
+          whileInView={{ opacity: 1 }}>
+          <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={`${basePathProfpics}/${post.profpic}`}
                   width={40}
@@ -147,7 +150,7 @@ const Card = (props) => {
           <div className={`${styles["sound"]}`} >
             <FontAwesomeIcon icon={faVolumeXmark} />
           </div>
-        </div>
+        </motion.div>
         <span class="material-symbols-outlined"
         id={idLike}>
           favorite
