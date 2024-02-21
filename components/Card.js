@@ -105,7 +105,8 @@ const Card = (props) => {
         </div>
         <motion.div className={`${styles["interactions"]}`}
           initial={{ opacity: 0.5 }}
-          whileInView={{ opacity: 1 }}>
+          whileInView={{ opacity: 1 }}
+          viewport={{ amount: "all" }}>
           <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={`${basePathProfpics}/${post.profpic}`}
