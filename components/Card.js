@@ -90,7 +90,10 @@ const Card = (props) => {
         onDoubleClick={handleDoubleClickLike}>
           <FontAwesomeIcon icon={faPlay} />
         </button>
-        <div className={`${styles["controls-container"]}`} >
+        <motion.div className={`${styles["controls-container"]}`} 
+         initial={{ opacity: 0.5 }}
+         whileInView={{ opacity: 1 }}
+         viewport={{ amount: "all" }}>       
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
             <p className={`${styles["descr"]}`}>
@@ -102,7 +105,7 @@ const Card = (props) => {
               <FontAwesomeIcon icon={faAngleRight} />
             </div>
           </div> 
-        </div>
+        </motion.div>
         <motion.div className={`${styles["interactions"]}`}
           initial={{ opacity: 0.5 }}
           whileInView={{ opacity: 1 }}
