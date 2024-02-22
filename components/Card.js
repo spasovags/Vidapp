@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +9,8 @@ const Card = (props) => {
   const post = props.value;
   const idv =`currVid_${post.id}`;
   const idLike = `bigLike_${post.id}`;
-  
+  const scrollRef = useRef(null);
+
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
@@ -18,7 +19,6 @@ const Card = (props) => {
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
   };
-
   const pauseVideo = () => {
     const vid = document.querySelector(`#${idv}`); 
     
@@ -30,7 +30,7 @@ const Card = (props) => {
        toggleIsPlaying();
     }
 
- };
+  };
   const toggleLikeVideo = () => {
     setIsLiked((current) => !current);  
   };
@@ -43,8 +43,7 @@ const Card = (props) => {
   };
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
-  
+  } 
   const handleDoubleClickLike = (event) => {
     const bigLike = document.querySelector(`#${idLike}`);
 
@@ -75,10 +74,10 @@ const Card = (props) => {
 
     removebigRedLiked();
     setIsLiked(true);
-   };
+  };
 
   return (
-      <div className={`${styles["card"]}`}>     
+      <div className={`${styles["card"]}`} ref={scrollRef} >     
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
@@ -93,7 +92,7 @@ const Card = (props) => {
         <motion.div className={`${styles["controls-container"]}`} 
          initial={{ opacity: 0.5 }}
          whileInView={{ opacity: 1 }}
-         viewport={{ amount: "all" }}>       
+         viewport={{ amount: "all", root: scrollRef }}>       
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
             <p className={`${styles["descr"]}`}>
@@ -109,7 +108,7 @@ const Card = (props) => {
         <motion.div className={`${styles["interactions"]}`}
           initial={{ opacity: 0.5 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ amount: "all" }}>
+          viewport={{ amount: "all", root: scrollRef }}>
           <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={`${basePathProfpics}/${post.profpic}`}
