@@ -92,7 +92,7 @@ const Card = (props) => {
         <motion.div className={`${styles["controls-container"]}`} 
          initial={{ opacity: 0.5 }}
          whileInView={{ opacity: 1 }}
-         viewport={{ amount: "all", root: scrollRef }}>       
+         viewport={{ root: scrollRef }}>       
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
             <p className={`${styles["descr"]}`}>
@@ -108,7 +108,7 @@ const Card = (props) => {
         <motion.div className={`${styles["interactions"]}`}
           initial={{ opacity: 0.5 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ amount: "all", root: scrollRef }}>
+          viewport={{ root: scrollRef }}>
           <div className={`${styles["prof-icon"]}`} >
             <Image
                   src={`${basePathProfpics}/${post.profpic}`}
