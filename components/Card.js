@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass, faL } from '@fortawesome/free-solid-svg-icons'
-import { motion } from "framer-motion";
+import { motion,inView } from "framer-motion";
 
 const Card = (props) => {
   const post = props.value;
@@ -75,8 +75,10 @@ const Card = (props) => {
     setIsLiked(true);
   };
 
+
   return (
-      <div className={`${styles["card"]}`}>     
+      <div className={`${styles["card"]}`}
+      >     
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
@@ -89,9 +91,8 @@ const Card = (props) => {
           <FontAwesomeIcon icon={faPlay} />
         </button>
         <motion.div className={`${styles["controls-container"]}`} 
-         initial={{ opacity: 0.5 }}
-         whileInView={{ opacity: 1 }}
-         viewport={{ amount: "all" }}>       
+         whileDrag={{ opacity: 0.5 }}
+         >       
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
             <p className={`${styles["descr"]}`}>
