@@ -19,7 +19,7 @@ import {
 
 const Footer = () => {
   const footerWidth = 30;
-  const footerHeight = 26;
+  const footerHeight = 20;
   const addWidth = 60;
 
   return (

@@ -34,6 +34,8 @@
 }
 .logo-close-container img{
       cursor: pointer;
+      max-height: 21px;
+      width: auto;
 }
 .logo-close-container a{
      display: flex;
@@ -63,7 +65,7 @@
       display: block;
     }
     .search-container{
-      height: 30px;
+      height: 21px;
       position: relative;
       cursor: pointer;
       display: inline-block;

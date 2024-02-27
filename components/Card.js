@@ -7,78 +7,78 @@ import { motion,inView } from "framer-motion";
 
 const Card = (props) => {
   const post = props.value;
-  const idv =`currVid_${post.id}`;
-  const idLike = `bigLike_${post.id}`;
+    const idv =`currVid_${post.id}`;
+      const idLike = `bigLike_${post.id}`;
 
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isLiked, setIsLiked] = useState(false);
-  const basePath = '/videos';
-  const basePathProfpics = '/profpics';
+        const [isPlaying, setIsPlaying] = useState(true);
+          const [isLiked, setIsLiked] = useState(false);
+            const basePath = '/videos';
+              const basePathProfpics = '/profpics';
 
-  const toggleIsPlaying = () => {
-      setIsPlaying((current) => !current);
-  };
-  const pauseVideo = () => {
-    const vid = document.querySelector(`#${idv}`); 
-    
-    if(isPlaying && vid){     
-      vid.pause(); 
-      toggleIsPlaying();
-    } else if(vid){
-       vid.play();
-       toggleIsPlaying();
-    }
+                const toggleIsPlaying = () => {
+                      setIsPlaying((current) => !current);
+                        };
+                          const pauseVideo = () => {
+                              const vid = document.querySelector(`#${idv}`); 
+                                  
+                                      if(isPlaying && vid){     
+                                            vid.pause(); 
+                                                  toggleIsPlaying();
+                                                      } else if(vid){
+                                                             vid.play();
+                                                                    toggleIsPlaying();
+                                                                        }
 
-  };
-  const toggleLikeVideo = () => {
-    setIsLiked((current) => !current);  
-  };
-  const removebigRedLiked = () => {
-    const bigLike = document.querySelector(`#${idLike}`);
+                                                                          };
+                                                                            const toggleLikeVideo = () => {
+                                                                                setIsLiked((current) => !current);  
+                                                                                  };
+                                                                                    const removebigRedLiked = () => {
+                                                                                        const bigLike = document.querySelector(`#${idLike}`);
 
-    setTimeout(() => {
-      bigLike.classList.remove(`${styles["bigRedLiked"]}`)},    
-      3000);
-  };
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  } 
-  const handleDoubleClickLike = (event) => {
-    const bigLike = document.querySelector(`#${idLike}`);
+                                                                                            setTimeout(() => {
+                                                                                                  bigLike.classList.remove(`${styles["bigRedLiked"]}`)},    
+                                                                                                        3000);
+                                                                                                          };
+                                                                                                            function getRandomInt(max) {
+                                                                                                                return Math.floor(Math.random() * max);
+                                                                                                                  } 
+                                                                                                                    const handleDoubleClickLike = (event) => {
+                                                                                                                        const bigLike = document.querySelector(`#${idLike}`);
 
-    const randRotate = getRandomInt(11);
+                                                                                                                            const randRotate = getRandomInt(11);
 
-    switch (randRotate) {
-      case 0, 1, 2, 3:
-        bigLike.style.rotate="-30deg"; break;
-      case 4, 5, 6, 7:
-        bigLike.style.rotate="30deg"; break;
-      default:
-        bigLike.style.rotate="0";
-     }
+                                                                                                                                switch (randRotate) {
+                                                                                                                                      case 0, 1, 2, 3:
+                                                                                                                                              bigLike.style.rotate="-30deg"; break;
+                                                                                                                                                    case 4, 5, 6, 7:
+                                                                                                                                                            bigLike.style.rotate="30deg"; break;
+                                                                                                                                                                  default:
+                                                                                                                                                                          bigLike.style.rotate="0";
+                                                                                                                                                                               }
 
-    const newPosiX = event.clientX - 60;
-    bigLike.style.left = newPosiX + "px";
-    
-    const newPosi = event.clientY - 130;
-    const newPos = newPosi + "px";
-    const oldPosi = event.clientY - 30;
-    const oldPos = oldPosi + "px";
-    
-    document.documentElement.style.setProperty('--bigLikeY', oldPos);
+                                                                                                                                                                                   const newPosiX = event.clientX - 60;
+                                                                                                                                                                                       bigLike.style.left = newPosiX + "px";
+                                                                                                                                                                                           
+                                                                                                                                                                                               const newPosi = event.clientY - 130;
+                                                                                                                                                                                                   const newPos = newPosi + "px";
+                                                                                                                                                                                                       const oldPosi = event.clientY - 30;
+                                                                                                                                                                                                           const oldPos = oldPosi + "px";
+                                                                                                                                                                                                               
+                                                                                                                                                                                                                   document.documentElement.style.setProperty('--bigLikeY', oldPos);
 
-    document.documentElement.style.setProperty('--bigLikeNewY', newPos);
-    
-    bigLike.classList.add(`${styles["bigRedLiked"]}`);    
+                                                                                                                                                                                                                       document.documentElement.style.setProperty('--bigLikeNewY', newPos);
+                                                                                                                                                                                                                           
+                                                                                                                                                                                                                               bigLike.classList.add(`${styles["bigRedLiked"]}`);    
 
-    removebigRedLiked();
-    setIsLiked(true);
-  };
+                                                                                                                                                                                                                                   removebigRedLiked();
+                                                                                                                                                                                                                                       setIsLiked(true);
+                                                                                                                                                                                                                                         };
 
 
   return (
       <div className={`${styles["card"]}`}
-      >     
+        >     
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
@@ -87,12 +87,12 @@ const Card = (props) => {
         className={`${styles["buttonPause"]} 
         ${ isPlaying ? "" : `${styles["showButtonPause"]}` }`}
         onClick={pauseVideo}
-        onDoubleClick={handleDoubleClickLike}>
+        onDoubleClick={handleDoubleClickLike}
+         >
           <FontAwesomeIcon icon={faPlay} />
-        </button>
-        <motion.div className={`${styles["controls-container"]}`} 
-         whileDrag={{ opacity: 0.5 }}
-         >       
+        </button>    
+        <div className={`${styles["controls-container"]} }`}
+        >       
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
             <p className={`${styles["descr"]}`}>
@@ -104,7 +104,7 @@ const Card = (props) => {
               <FontAwesomeIcon icon={faAngleRight} />
             </div>
           </div> 
-        </motion.div>
+        </div>
         <motion.div className={`${styles["interactions"]}`}
           initial={{ opacity: 0.5 }}
           whileInView={{ opacity: 1 }}
