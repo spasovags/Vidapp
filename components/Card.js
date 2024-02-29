@@ -72,7 +72,25 @@ const Card = (props) => {
    removebigRedLiked();
     setIsLiked(true);
   };
-
+  let pendingClick;
+  let clicked = 0;
+  let time_dbclick = 500 // 500ms
+  
+  function clickVid(event){
+    clicked++;
+    clearTimeout(pendingClick)
+    if(clicked >= 2){
+      handleDoubleClickLike(event);
+      clicked = 0;
+    } else {
+      pendingClick = setTimeout(() => {
+        pauseVideo();
+        console.log('One click!')
+        clicked = 0;
+      }, time_dbclick);
+    }
+  }
+  
 
   return (
       <div className={`${styles["card"]}`}
@@ -84,8 +102,8 @@ const Card = (props) => {
         <button
         className={`${styles["buttonPause"]} 
         ${ isPlaying ? "" : `${styles["showButtonPause"]}` }`}
-        onClick={pauseVideo}
-        onDoubleClick={handleDoubleClickLike}
+        onClick={clickVid}
+       
          >
           <FontAwesomeIcon icon={faPlay} />
         </button>    
