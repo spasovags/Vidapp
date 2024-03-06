@@ -91,6 +91,9 @@ const Card = (props) => {
         clicked = 0;
       }, time_dbclick);
     }
+    if(isCommentsShown){
+      toggleIsCommentsShown();
+    }
   }
   const toggleIsCommentsShown = () => {
     setIsCommentsShown((current) => !current);
