@@ -9,6 +9,11 @@ const Card = (props) => {
   const post = props.value;
   const idv =`currVid_${post.id}`;
   const idLike = `bigLike_${post.id}`;
+  let pendingClick;
+  let clicked = 0;
+  let time_dbclick = 500 // 500ms
+  
+  const [isCommentsShown, setIsCommentsShown] = useState(false);
 
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
@@ -72,10 +77,7 @@ const Card = (props) => {
    removebigRedLiked();
     setIsLiked(true);
   };
-  let pendingClick;
-  let clicked = 0;
-  let time_dbclick = 500 // 500ms
-  
+   
   function clickVid(event){
     clicked++;
     clearTimeout(pendingClick)
@@ -90,11 +92,14 @@ const Card = (props) => {
       }, time_dbclick);
     }
   }
-  
+  const toggleIsCommentsShown = () => {
+    setIsCommentsShown((current) => !current);
+};
 
   return (
-      <div className={`${styles["card"]}`}
-        >     
+     <div className={`${styles["card"]}`} >
+       <div className={`${styles["cardVid"]} 
+       ${ isCommentsShown ? `${styles["cardsmall"]}` : "" }`}>       
         <video id={idv} autoPlay loop muted>
               <source src={`${basePath}/${post.vid}`}
               type="video/mp4" />
@@ -102,9 +107,7 @@ const Card = (props) => {
         <button
         className={`${styles["buttonPause"]} 
         ${ isPlaying ? "" : `${styles["showButtonPause"]}` }`}
-        onClick={clickVid}
-       
-         >
+        onClick={clickVid}>
           <FontAwesomeIcon icon={faPlay} />
         </button>    
         <div className={`${styles["controls-container"]} }`}
@@ -145,7 +148,8 @@ const Card = (props) => {
            <p>{post.likes}</p>
           </div>
           <div className={`${styles["comment"]} ${styles["icon-vid"]}` } >
-           <button className={`${styles["buttonInteractions"]}` } >
+           <button className={`${styles["buttonInteractions"]}` } 
+           onClick={toggleIsCommentsShown}>
             <FontAwesomeIcon icon={faCommentDots} />
            </button>
           <p>{post.comments}</p>
@@ -174,6 +178,11 @@ const Card = (props) => {
         id={idLike}>
           favorite
         </span>
+       </div>
+       <div className={`${styles["commentSection"]}
+         ${ isCommentsShown ? `${styles["commentsShown"]}` : "" }`}>
+
+       </div>
      </div>
    );
 }
