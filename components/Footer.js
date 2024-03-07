@@ -23,7 +23,7 @@ const Footer = () => {
   const addWidth = 60;
 
   return (
-      <ul className={`${styles["footer-container"]}`}>
+   <ul className={`${styles["footer-container"]}`}>
         <li className={`${styles["footer-icon"]}`}>
           <Link href="/">
           <Image

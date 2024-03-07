@@ -184,7 +184,24 @@ const Card = (props) => {
        </div>
        <div className={`${styles["commentSection"]}
          ${ isCommentsShown ? `${styles["commentsShown"]}` : "" }`}>
-
+         <div className={`${styles["commentsNumberClose"]}`} >
+         </div>
+         <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+         </ul>
+         <div className={`${styles["reply"]}`} >
+         <div className={`${styles["reply"]}`} >
+          <span >&#128514;</span>
+          <span >&#128514;</span>
+          <span >&#128514;</span>
+          <span >&#128514;</span>
+          <span >&#128514;</span>
+          <span >&#128514;</span>
+          <span >&#128514;</span>
+         </div>
+         </div>         
        </div>
      </div>
    );
