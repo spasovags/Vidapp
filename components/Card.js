@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass, faL } from '@fortawesome/free-solid-svg-icons'
-import { motion,inView } from "framer-motion";
+import { faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
+import { motion } from "framer-motion";
 
 const Card = (props) => {
   const post = props.value;
@@ -187,20 +188,40 @@ const Card = (props) => {
          <div className={`${styles["commentsNumberClose"]}`} >
          </div>
          <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>Comment1</li>
+          <li>comment</li>
+          <li>comment3</li>
          </ul>
          <div className={`${styles["reply"]}`} >
-         <div className={`${styles["reply"]}`} >
-          <span >&#128514;</span>
-          <span >&#128514;</span>
-          <span >&#128514;</span>
-          <span >&#128514;</span>
-          <span >&#128514;</span>
-          <span >&#128514;</span>
-          <span >&#128514;</span>
-         </div>
+          <div className={`${styles["emoji"]}`} >
+           <span >&#128149;</span>
+           <span >&#128148;</span>
+           <span >&#128514;</span>
+           <span >&#128557;</span>
+           <span >&#128293;</span>
+           <span >&#129392;</span>
+           <span >&#128077;</span>
+          </div>
+          <div className={`${styles["addComment"]}`} >
+              <Image
+                  src={`${basePathProfpics}/${post.profpic}`}
+                  width={40}
+                  height={40}
+                  alt="Picture of the author"
+              />
+          <div className={`${styles["inputIcons"]}`} >
+            <form action="/action_page.php">            
+              <input type="text"
+                     id="name"
+                     name="name"
+                     placeholder="Add comment..."  />
+            </form>
+            <div className={`${styles["iconsInput"]}`} >
+             <FontAwesomeIcon icon={faAt} />
+             <FontAwesomeIcon icon={faFaceLaugh} />
+            </div>
+          </div>
+          </div>
          </div>         
        </div>
      </div>
