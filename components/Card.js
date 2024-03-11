@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
 import { motion } from "framer-motion";
 
@@ -192,7 +192,8 @@ const Card = (props) => {
           <li>comment</li>
           <li>comment3</li>
          </ul>
-         <div className={`${styles["reply"]}`} >
+         <div className={`${styles["reply"]}
+              ${ isCommentsShown ? `${styles["replyShown"]}` : "" }`}>
           <div className={`${styles["emoji"]}`} >
            <span >&#128149;</span>
            <span >&#128148;</span>
@@ -203,24 +204,25 @@ const Card = (props) => {
            <span >&#128077;</span>
           </div>
           <div className={`${styles["addComment"]}`} >
-              <Image
+            <Image
                   src={`${basePathProfpics}/${post.profpic}`}
                   width={40}
                   height={40}
                   alt="Picture of the author"
               />
-          <div className={`${styles["inputIcons"]}`} >
-            <form action="/action_page.php">            
+            <div className={`${styles["inputIcons"]}`} >
+              <form action="/action_page.php">            
               <input type="text"
                      id="name"
                      name="name"
                      placeholder="Add comment..."  />
-            </form>
-            <div className={`${styles["iconsInput"]}`} >
-             <FontAwesomeIcon icon={faAt} />
-             <FontAwesomeIcon icon={faFaceLaugh} />
+              </form>
+              <div className={`${styles["iconsInput"]}`} >
+               <FontAwesomeIcon icon={faAt} />
+               <FontAwesomeIcon icon={faFaceLaugh} />
+               <FontAwesomeIcon icon={faGift} />
+              </div>
             </div>
-          </div>
           </div>
          </div>         
        </div>
