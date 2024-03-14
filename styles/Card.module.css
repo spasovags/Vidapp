@@ -22,6 +22,22 @@
 {
   display: none;
 }
+.commentsNumberClose{
+  display: flex;
+  align-items: center;
+}
+.commentsNumberClose p{
+  flex: 1;
+  margin: 0.5em auto;
+  text-align: center;
+  font-weight: 600;
+}
+.commentsNumberClose button{
+  border-style: none;
+  background-color: white;
+  padding: 0.7em;
+  border-radius: 50px;
+}
 .commentSection, .reply{
   height: 0;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
 import { motion } from "framer-motion";
 
@@ -186,6 +186,10 @@ const Card = (props) => {
        <div className={`${styles["commentSection"]}
          ${ isCommentsShown ? `${styles["commentsShown"]}` : "" }`}>
          <div className={`${styles["commentsNumberClose"]}`} >
+          <p>{post.comments} comments</p>
+          <button>
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
          </div>
          <ul>
           <li>Comment1</li>
