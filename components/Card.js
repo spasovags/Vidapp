@@ -191,11 +191,7 @@ const Card = (props) => {
             <FontAwesomeIcon icon={faXmark} />
           </button>
          </div>
-         <ul>
-          <li>Comment1</li>
-          <li>comment</li>
-          <li>comment3</li>
-         </ul>
+         
          <div className={`${styles["reply"]}
               ${ isCommentsShown ? `${styles["replyShown"]}` : "" }`}>
           <div className={`${styles["emoji"]}`} >
