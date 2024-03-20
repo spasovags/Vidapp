@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
 import { motion } from "framer-motion";
+import CommentContainer from '../components/CommentContainer'
 
 const Card = (props) => {
   const post = props.value;
@@ -20,6 +21,8 @@ const Card = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
+  const replies = { profpicComment: "", thecomment: "bruh ", commentUsername: "John"  };
+  const pict={`${basePathProfpics}/${post.profpic}`}
 
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
@@ -191,7 +194,7 @@ const Card = (props) => {
             <FontAwesomeIcon icon={faXmark} />
           </button>
          </div>
-         
+         <CommentContainer replies= {replies}/>
          <div className={`${styles["reply"]}
               ${ isCommentsShown ? `${styles["replyShown"]}` : "" }`}>
           <div className={`${styles["emoji"]}`} >

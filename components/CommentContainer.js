@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
 
 const CommentContainer = (props) => {
@@ -8,17 +10,17 @@ const CommentContainer = (props) => {
     return (
         <div className={`${styles["commentContainer"]}`} >
             <Image
-              src={props.profpicComment}
+              src={props.replies.profpicComment}
               width={40}
               height={40}
               alt="Picture of the author"
             />
             <div className={`${styles["commentInfo"]}`} >
                 <p className={`${styles["commentUsername"]}`}>
-                  {props.commentUsername}
+                  {props.replies.commentUsername}
                 </p>
                 <p className={`${styles["thecomment"]}`}>
-                  {props.thecomment}
+                  {props.replies.thecomment}
                 </p>
                 <div className={`${styles["commentActionsData"]}`} >
                   <div className={`${styles["commentData"]}`} >
@@ -28,11 +30,17 @@ const CommentContainer = (props) => {
                     <button>Reply</button>
                   </div>
                   <div className={`${styles["commentActions"]}`} >
-                  <button></button> 
+                  <button>
+                    <FontAwesomeIcon icon={faHeart} />
+                  </button> 
                     <p>
-                     {props.commentLikes}
+                     {props.replies.commentLikes}
                     </p>
-                    <button></button>            
+                    <button>
+                      <span class="material-symbols-outlined">
+                        thumb_down
+                      </span>
+                    </button>            
                   </div>
                 </div>
                 <div className={`${styles["commentReplies"]}`} >
@@ -41,3 +49,5 @@ const CommentContainer = (props) => {
         </div>
     ) 
 }
+
+export default CommentContainer 
