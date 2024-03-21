@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import styles from '../styles/Card.module.css'
+import styles from '../styles/CommentContainer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
@@ -19,13 +19,13 @@ const CommentContainer = (props) => {
                 <p className={`${styles["commentUsername"]}`}>
                   {props.replies.commentUsername}
                 </p>
-                <p className={`${styles["thecomment"]}`}>
+                <p className={`${styles["commented"]}`}>
                   {props.replies.thecomment}
                 </p>
                 <div className={`${styles["commentActionsData"]}`} >
                   <div className={`${styles["commentData"]}`} >
                     <p>
-                     {props.time}
+                     {props.replies.time}
                     </p>
                     <button>Reply</button>
                   </div>

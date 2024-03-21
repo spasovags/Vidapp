@@ -21,8 +21,13 @@ const Card = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
-  const replies = { profpicComment: "", thecomment: "bruh ", commentUsername: "John"  };
-  const pict={`${basePathProfpics}/${post.profpic}`}
+  const replies = { time: "08-05-2045",
+  profpicComment: "",
+  thecomment: "bruh ",
+  commentUsername: "John",
+  commentLikes: "45k"};
+  const pict=`${basePathProfpics}/${post.profpic}`;
+  replies.profpicComment = pict;
 
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
@@ -91,7 +96,6 @@ const Card = (props) => {
     } else {
       pendingClick = setTimeout(() => {
         pauseVideo();
-        console.log('One click!')
         clicked = 0;
       }, time_dbclick);
     }

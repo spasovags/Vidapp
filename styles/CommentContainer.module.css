@@ -1,0 +1,25 @@
+.commentContainer,
+.commentActionsData,
+.commentActions,
+.commentInfo,
+.commentData {
+    display: flex;
+    align-items: center;
+}
+.commentContainer{
+    width: 100%;
+}
+.commentInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.commentActionsData{
+    width: 100%;
+    justify-content: space-between;
+}
+.commentUsername,
+.commented {
+  margin-right: auto;
+}
