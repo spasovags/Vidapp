@@ -36,10 +36,8 @@ const CommentContainer = (props) => {
                     <p>
                      {props.replies.commentLikes}
                     </p>
-                    <button>
-                      <span class="material-symbols-outlined">
-                        thumb_down
-                      </span>
+                    <button className={`${styles["dislike"]}`}>             
+                     dis
                     </button>            
                   </div>
                 </div>

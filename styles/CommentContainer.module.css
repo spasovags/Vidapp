@@ -8,12 +8,25 @@
 }
 .commentContainer{
     width: 100%;
+    align-items: flex-start;
+    margin: 1em;
+}
+.commentContainer img:first-child {
+    border-radius: 50px;
 }
 .commentInfo {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
+    margin-left: 0.2em;
+}
+.commentInfo p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.commented{
+    font-size: 1.3rem;
 }
 .commentActionsData{
     width: 100%;
@@ -23,3 +36,16 @@
 .commented {
   margin-right: auto;
 }
+.commentActions button,
+.commentData button {
+    border-style: none;
+    background-color: white;
+}
+.dislike {
+  background-image: url("../public/thumb_down_FILL0_wght400_GRAD0_opsz24.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: transparent;
+}
+
