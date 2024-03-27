@@ -30,9 +30,9 @@ const CommentContainer = (props) => {
                     <button>Reply</button>
                   </div>
                   <div className={`${styles["commentActions"]}`} >
-                  <button>
-                    <FontAwesomeIcon icon={faHeart} />
-                  </button> 
+                    <button>
+                     <FontAwesomeIcon icon={faHeart} />
+                    </button> 
                     <p>
                      {props.replies.commentLikes}
                     </p>

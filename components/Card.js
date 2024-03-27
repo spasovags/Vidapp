@@ -198,7 +198,24 @@ const Card = (props) => {
             <FontAwesomeIcon icon={faXmark} />
           </button>
          </div>
+         <div>
          <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         <CommentContainer replies= {replies}/>
+         </div>
          <div className={`${styles["reply"]}
               ${ isCommentsShown ? `${styles["replyShown"]}` : "" }`}>
           <div className={`${styles["emoji"]}`} >
