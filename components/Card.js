@@ -105,6 +105,7 @@ const Card = (props) => {
   }
   const toggleIsCommentsShown = () => {
     setIsCommentsShown((current) => !current);
+    console.log(isCommentsShown)
 };
 
   return (
@@ -198,8 +199,8 @@ const Card = (props) => {
             <FontAwesomeIcon icon={faXmark} />
           </button>
          </div>
-         <div>
-         <CommentContainer replies= {replies}/>
+         <div className={`${styles["repliesList"]}`}>
+          <CommentContainer replies= {replies}/>
          <CommentContainer replies= {replies}/>
          <CommentContainer replies= {replies}/>
          <CommentContainer replies= {replies}/>
