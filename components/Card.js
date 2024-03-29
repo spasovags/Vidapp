@@ -14,20 +14,35 @@ const Card = (props) => {
   let pendingClick;
   let clicked = 0;
   let time_dbclick = 500 // 500ms
-  
+
   const [isCommentsShown, setIsCommentsShown] = useState(false);
 
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
+
   const replies = { time: "08-05-2045",
-  profpicComment: "",
+  profpicComment: `${basePathProfpics}/${post.profpic}`,
   thecomment: "bruh ",
   commentUsername: "John",
   commentLikes: "45k"};
-  const pict=`${basePathProfpics}/${post.profpic}`;
-  replies.profpicComment = pict;
+  const replies0 = { time: "4h",
+  profpicComment: `${basePathProfpics}/${post.profpic}`,
+  thecomment: "Blah Blah Blah ",
+  commentUsername: "trik tok",
+  commentLikes: "55"};
+  console.log(replies0.profpicComment);
+  const replies1 = { time: "15h",
+  profpicComment: `${basePathProfpics}/${post.profpic}`,
+  thecomment: "♥️♥️♥️",
+  commentUsername: "Inna Milly",
+  commentLikes: "77"};
+  const replies2 = { time: "1d",
+  profpicComment: `${basePathProfpics}/${post.profpic}`,
+  thecomment: "I bet this video is in reverse",
+  commentUsername: "Josh",
+  commentLikes: "1,677"};
 
   const toggleIsPlaying = () => {
       setIsPlaying((current) => !current);
@@ -105,7 +120,6 @@ const Card = (props) => {
   }
   const toggleIsCommentsShown = () => {
     setIsCommentsShown((current) => !current);
-    console.log(isCommentsShown)
 };
 
   return (
@@ -195,27 +209,27 @@ const Card = (props) => {
          ${ isCommentsShown ? `${styles["commentsShown"]}` : "" }`}>
          <div className={`${styles["commentsNumberClose"]}`} >
           <p>{post.comments} comments</p>
-          <button>
+          <button onClick={toggleIsCommentsShown}>
             <FontAwesomeIcon icon={faXmark} />
           </button>
          </div>
          <div className={`${styles["repliesList"]}`}>
           <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
-         <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies2}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies2}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies2}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
          </div>
          <div className={`${styles["reply"]}
               ${ isCommentsShown ? `${styles["replyShown"]}` : "" }`}>
