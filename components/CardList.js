@@ -4,11 +4,24 @@ import styles from '../styles/CardList.module.css'
 
 
 const CardList = ({technologies}) => {
+  const idSect ="currCar";
+
+  function handleDataFromChild(commentsShown) {
+
+    if (commentsShown) {
+      const sect = document.querySelector(`#${idSect}`);
+      sect.classList.add(`${styles["noscroll"]}`);
+    }
+    else {
+      const sect = document.querySelector(`#${idSect}`);
+      sect.classList.remove(`${styles["noscroll"]}`);
+    }
+  }
 
    return (   
-    <section className={`${styles["techstack-container"]}`}>
+    <section id={idSect} className={`${styles["techstack-container"]}`}>
        {technologies.map((technology, index) =>
-        <Card key={technology.id} indexAnim={index} value={technology}/>)}       
+        <Card sendDataToParent={handleDataFromChild} key={technology.id} indexAnim={index} value={technology}/>)}       
     </section>
   )
 }

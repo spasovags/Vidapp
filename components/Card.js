@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,12 +11,13 @@ const Card = (props) => {
   const post = props.value;
   const idv =`currVid_${post.id}`;
   const idLike = `bigLike_${post.id}`;
+  const idCard =`currCard_${post.id}`;
+
   let pendingClick;
   let clicked = 0;
   let time_dbclick = 500 // 500ms
 
   const [isCommentsShown, setIsCommentsShown] = useState(false);
-
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
   const basePath = '/videos';
@@ -32,7 +33,6 @@ const Card = (props) => {
   thecomment: "Blah Blah Blah ",
   commentUsername: "trik tok",
   commentLikes: "55"};
-  console.log(replies0.profpicComment);
   const replies1 = { time: "15h",
   profpicComment: `${basePathProfpics}/${post.profpic}`,
   thecomment: "♥️♥️♥️",
@@ -118,12 +118,17 @@ const Card = (props) => {
       toggleIsCommentsShown();
     }
   }
+
+  useEffect(() => 
+  { props.sendDataToParent(isCommentsShown) },
+   [isCommentsShown, setIsCommentsShown]);
+
   const toggleIsCommentsShown = () => {
     setIsCommentsShown((current) => !current);
 };
 
   return (
-     <div className={`${styles["card"]}`} >
+     <div id={idCard} className={`${styles["card"]}`}>
        <div className={`${styles["cardVid"]} 
        ${ isCommentsShown ? `${styles["cardsmall"]}` : "" }`}>       
         <video id={idv} autoPlay loop muted>
@@ -136,8 +141,7 @@ const Card = (props) => {
         onClick={clickVid}>
           <FontAwesomeIcon icon={faPlay} />
         </button>    
-        <div className={`${styles["controls-container"]} }`}
-        >       
+        <div className={`${styles["controls-container"]} }`}>       
           <div className={`${styles["title-descr"]}`} >
             <p>{post.username}</p>
             <p className={`${styles["descr"]}`}>

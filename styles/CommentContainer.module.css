@@ -49,6 +49,9 @@
 .commentActions {
     font-size: 1rem;
     color: rgb(66, 65, 65);
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 102pxnpm run dev;
 }
 .commentData button {
     border-style: none;
@@ -72,5 +75,7 @@
   background-size: contain;
   background-position: center;
   color: rgba(255, 255, 255, 0.008);
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 
