@@ -7,7 +7,6 @@
     align-items: center;
 }
 .commentContainer{
-    width: 100%;
     align-items: flex-start;
     margin: 1em;
 }
@@ -50,8 +49,8 @@
     font-size: 1rem;
     color: rgb(66, 65, 65);
     align-items: flex-start;
-    justify-content: flex-start;
-    width: 102pxnpm run dev;
+    justify-content: space-between;
+    width: 100px;
 }
 .commentData button {
     border-style: none;
