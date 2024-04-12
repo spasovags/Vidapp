@@ -66,7 +66,7 @@ const Card = (props) => {
 
     setTimeout(() => {
        bigLike.classList.remove(`${styles["bigRedLiked"]}`)},    
-        3000);
+        30000);
   };
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -86,12 +86,20 @@ const Card = (props) => {
 
     const newPosiX = event.clientX - 60;
     bigLike.style.left = newPosiX + "px";
-                                                                                                                                                                                           
+
+    console.log("newPosiX - where you tap X", newPosiX);
+                                                                                                                                                                                     
     const newPosi = event.clientY - 130;
     const newPos = newPosi + "px";
+
+    console.log("newPos Y - where it goes", newPos);
+
     const oldPosi = event.clientY - 30;
     const oldPos = oldPosi + "px";
-                                                                                                                                                                                                               
+
+
+    console.log("old pos Y where you tap", oldPosi) 
+    
     document.documentElement.style.setProperty('--bigLikeY', oldPos);
 
     document.documentElement.style.setProperty('--bigLikeNewY', newPos);
