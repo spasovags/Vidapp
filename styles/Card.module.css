@@ -124,7 +124,7 @@
   z-index: 1020;
   font-size: 6rem;
   top: var(--bigLikeY);
-  animation: likeAnim 30s;
+  animation: likeAnim 3s;
 }
 @keyframes likeAnim {
     from {

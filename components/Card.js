@@ -65,7 +65,9 @@ const Card = (props) => {
     const bigLike = document.querySelector(`#${idLike}`);
 
     setTimeout(() => {
-       bigLike.classList.remove(`${styles["bigRedLiked"]}`)},    
+       bigLike.classList.remove(`${styles["bigRedLiked"]}`);
+       bigLike.style.width = "0";
+       },    
         30000);
   };
   function getRandomInt(max) {
@@ -103,9 +105,10 @@ const Card = (props) => {
     document.documentElement.style.setProperty('--bigLikeY', oldPos);
 
     document.documentElement.style.setProperty('--bigLikeNewY', newPos);
-                                                                                                                                                                                                                           
+    
+    bigLike.style.width = "auto";
     bigLike.classList.add(`${styles["bigRedLiked"]}`);    
-
+  
    removebigRedLiked();
     setIsLiked(true);
   };
