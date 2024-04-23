@@ -67,8 +67,9 @@ const Card = (props) => {
     setTimeout(() => {
        bigLike.classList.remove(`${styles["bigRedLiked"]}`);
        bigLike.style.width = "0";
+       bigLike.style.height = "0";
        },    
-        30000);
+        3000);
   };
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -100,6 +101,8 @@ const Card = (props) => {
     document.documentElement.style.setProperty('--bigLikeNewY', newPos);
     
     bigLike.style.width = "auto";
+    bigLike.style.height = "auto";
+
     bigLike.classList.add(`${styles["bigRedLiked"]}`);    
   
    removebigRedLiked();
