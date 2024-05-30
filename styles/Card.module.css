@@ -117,7 +117,7 @@
 }
 .bigRedLiked{
   width: auto;
-  background: -webkit-linear-gradient(45deg, #f84b6e, #fe2c55);
+  background: -webkit-linear-gradient(45deg, #4bf86e, #2c44fe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
@@ -240,7 +240,7 @@
   font-size: 2rem;
 }
 .videoLiked{
-  color: #fe2c55;
+  color: #2c44fe;
 }
 .like .buttonInteractions span{
   font-size: 2.5rem;
