@@ -242,6 +242,9 @@
 .videoLiked{
   color: #2c44fe;
 }
+.videoSaved{
+ color: darkorange;
+}
 .like .buttonInteractions span{
   font-size: 2.5rem;
 }

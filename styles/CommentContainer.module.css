@@ -47,7 +47,7 @@
 .commentActions {
     font-size: 1rem;
     color: rgb(66, 65, 65);
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 100px;
 }

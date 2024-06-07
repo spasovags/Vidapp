@@ -20,6 +20,7 @@ const Card = (props) => {
   const [isCommentsShown, setIsCommentsShown] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
 
@@ -61,6 +62,9 @@ const Card = (props) => {
   const toggleLikeVideo = () => {
      setIsLiked((current) => !current);  
   };
+  const toggleSaveVideo = () => {
+    setIsSaved((current) => !current);  
+ };
   const removebigRedLiked = () => {
     const bigLike = document.querySelector(`#${idLike}`);
 
@@ -192,7 +196,10 @@ const Card = (props) => {
           <p>{post.comments}</p>
           </div>
           <div className={`${styles["save"]} ${styles["icon-vid"]}` } >
-           <button className={`${styles["buttonInteractions"]}` } > 
+           <button className={`${styles["buttonInteractions"]} 
+            ${ isSaved ? `${styles["videoSaved"]}` : "" }`}
+            onClick={toggleSaveVideo}>
+           
              <span class="material-symbols-outlined">
               bookmark
              </span>
