@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
@@ -198,8 +198,7 @@ const Card = (props) => {
           <div className={`${styles["save"]} ${styles["icon-vid"]}` } >
            <button className={`${styles["buttonInteractions"]} 
             ${ isSaved ? `${styles["videoSaved"]}` : "" }`}
-            onClick={toggleSaveVideo}>
-           
+            onClick={toggleSaveVideo}>           
              <span class="material-symbols-outlined">
               bookmark
              </span>
@@ -222,6 +221,18 @@ const Card = (props) => {
         id={idLike}>
           favorite
         </span>
+        <div className={`${styles["savepopuphidden"]} 
+        ${ isSaved ? `${styles["savepopup"]}` : "" }`}> 
+         <div className={`${styles["savepopupcont"]}`}>          
+          <div className={`${styles["addedFav"]}`} >
+          <FontAwesomeIcon icon={faCircleCheck} />
+           <p>Added to Favorites</p>
+          </div>
+          <div className={`${styles["manageFav"]}`} >
+           <p>Manage</p>
+          </div>
+         </div>
+       </div>
        </div>
        <div className={`${styles["commentSection"]}
          ${ isCommentsShown ? `${styles["commentsShown"]}` : "" }`}>
