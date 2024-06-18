@@ -246,27 +246,47 @@
  color: darkorange;
 }
 .savepopuphidden{
-  display: none;
+  visibility: hidden;
 }
 .savepopup{
-  display: block;
+  visibility: visible;
   z-index: 20000;
   background-color: transparent;
   color: white;
   position: absolute;
   bottom: 40px;
   width: 100%;
+  animation: showSaved 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+@keyframes showSaved{
+  from {
+   opacity: 1;
+    }
+  to {
+    opacity: 0;
+  }
 }
 .savepopupcont{
   margin: 0px 1em;
-  background-color: rgb(18, 18, 39);
+  background-color: #2e2e2e;
   color: white;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
 }
+.savepopupcont p {
+  margin: 0.5em 0;
+}
+.manageFav, .addedFav{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0 0.5em;
+}
 .manageFav{
-  color: rgb(200, 200, 254);
+  color: #5ca9ef;
 }
 .like .buttonInteractions span{
   font-size: 2.5rem;
