@@ -136,7 +136,16 @@ const Card = (props) => {
 
   const toggleIsCommentsShown = () => {
     setIsCommentsShown((current) => !current);
-};
+  };
+
+  function autoScroll() {
+      window.scrollBy(0, -window.innerHeight);
+      scrolldelay = setTimeout(pageScroll,10);
+  }
+  function contextMenuHandle(e){
+   
+   e.preventDefault()
+  }
 
   return (
      <div id={idCard} className={`${styles["card"]}`}>
@@ -149,7 +158,8 @@ const Card = (props) => {
         <button
         className={`${styles["buttonPause"]} 
         ${ isPlaying ? "" : `${styles["showButtonPause"]}` }`}
-        onClick={clickVid}>
+        onClick={clickVid}
+        onContextMenu={contextMenuHandle}>
           <FontAwesomeIcon icon={faPlay} />
         </button>    
         <div className={`${styles["controls-container"]} }`}>       
@@ -233,10 +243,70 @@ const Card = (props) => {
            <FontAwesomeIcon icon={faChevronRight} />
           </div>
          </div>
-       </div>
+        </div>
        </div>
        <div className={`${styles["commentSection"]}
          ${ isCommentsShown ? `${styles["commentsShown"]}` : "" }`}>
+         <div className={`${styles["commentsNumberClose"]}`} >
+          <p>{post.comments} comments</p>
+          <button onClick={toggleIsCommentsShown}>
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+         </div>
+         <div className={`${styles["repliesList"]}`}>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies2}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies2}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
+          <CommentContainer replies= {replies1}/>
+          <CommentContainer replies= {replies2}/>
+          <CommentContainer replies= {replies}/>
+          <CommentContainer replies= {replies0}/>
+         </div>
+         <div className={`${styles["reply"]}
+              ${ isCommentsShown ? `${styles["replyShown"]}` : "" }`}>
+          <div className={`${styles["emoji"]}`} >
+           <span >&#128149;</span>
+           <span >&#128148;</span>
+           <span >&#128514;</span>
+           <span >&#128557;</span>
+           <span >&#128293;</span>
+           <span >&#129392;</span>
+           <span >&#128077;</span>
+          </div>
+          <div className={`${styles["addComment"]}`} >
+            <Image
+                  src={`${basePathProfpics}/${post.profpic}`}
+                  width={40}
+                  height={40}
+                  alt="Picture of the author"
+              />
+            <div className={`${styles["inputIcons"]}`} >
+              <form action="/action_page.php">            
+              <input type="text"
+                     id="name"
+                     name="name"
+                     placeholder="Add comment..."  />
+              </form>
+              <div className={`${styles["iconsInput"]}`} >
+               <FontAwesomeIcon icon={faAt} />
+               <FontAwesomeIcon icon={faFaceLaugh} />
+               <FontAwesomeIcon icon={faGift} />
+              </div>
+            </div>
+          </div>
+         </div>         
+       </div>
+       <div className={`${styles["contextMenuHidden"]}
+         ${ isCommentsShown ? `${styles["contextMenuShown"]}` : "" }`}>
          <div className={`${styles["commentsNumberClose"]}`} >
           <p>{post.comments} comments</p>
           <button onClick={toggleIsCommentsShown}>

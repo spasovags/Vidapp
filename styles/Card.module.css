@@ -43,9 +43,12 @@
   padding: 0.7em;
   border-radius: 50px;
 }
-.commentSection, .reply{
-  /*height: 0;*/
+.commentSection, .reply, .contextMenuHidden{
   display: none;
+}
+.contextMenuShown{
+  display: block;
+  
 }
 .commentsShown{
   height: 60%;
