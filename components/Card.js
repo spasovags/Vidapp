@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
@@ -21,6 +21,8 @@ const Card = (props) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
+  const [isContextShown, setIsContextShown] = useState(false);
+
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
 
@@ -142,9 +144,12 @@ const Card = (props) => {
       window.scrollBy(0, -window.innerHeight);
       scrolldelay = setTimeout(pageScroll,10);
   }
+  const toggleIsContextShown = () => {
+    setIsContextShown((current) => !current);
+  };
   function contextMenuHandle(e){
-   
-   e.preventDefault()
+   toggleIsContextShown()
+   //e.preventDefault()
   }
 
   return (
@@ -306,64 +311,15 @@ const Card = (props) => {
          </div>         
        </div>
        <div className={`${styles["contextMenuHidden"]}
-         ${ isCommentsShown ? `${styles["contextMenuShown"]}` : "" }`}>
-         <div className={`${styles["commentsNumberClose"]}`} >
-          <p>{post.comments} comments</p>
-          <button onClick={toggleIsCommentsShown}>
-            <FontAwesomeIcon icon={faXmark} />
-          </button>
-         </div>
-         <div className={`${styles["repliesList"]}`}>
-          <CommentContainer replies= {replies}/>
-          <CommentContainer replies= {replies0}/>
-          <CommentContainer replies= {replies1}/>
-          <CommentContainer replies= {replies2}/>
-          <CommentContainer replies= {replies}/>
-          <CommentContainer replies= {replies0}/>
-          <CommentContainer replies= {replies1}/>
-          <CommentContainer replies= {replies2}/>
-          <CommentContainer replies= {replies}/>
-          <CommentContainer replies= {replies1}/>
-          <CommentContainer replies= {replies}/>
-          <CommentContainer replies= {replies0}/>
-          <CommentContainer replies= {replies1}/>
-          <CommentContainer replies= {replies2}/>
-          <CommentContainer replies= {replies}/>
-          <CommentContainer replies= {replies0}/>
-         </div>
-         <div className={`${styles["reply"]}
-              ${ isCommentsShown ? `${styles["replyShown"]}` : "" }`}>
-          <div className={`${styles["emoji"]}`} >
-           <span >&#128149;</span>
-           <span >&#128148;</span>
-           <span >&#128514;</span>
-           <span >&#128557;</span>
-           <span >&#128293;</span>
-           <span >&#129392;</span>
-           <span >&#128077;</span>
-          </div>
-          <div className={`${styles["addComment"]}`} >
-            <Image
-                  src={`${basePathProfpics}/${post.profpic}`}
-                  width={40}
-                  height={40}
-                  alt="Picture of the author"
-              />
-            <div className={`${styles["inputIcons"]}`} >
-              <form action="/action_page.php">            
-              <input type="text"
-                     id="name"
-                     name="name"
-                     placeholder="Add comment..."  />
-              </form>
-              <div className={`${styles["iconsInput"]}`} >
-               <FontAwesomeIcon icon={faAt} />
-               <FontAwesomeIcon icon={faFaceLaugh} />
-               <FontAwesomeIcon icon={faGift} />
-              </div>
-            </div>
-          </div>
-         </div>         
+         ${ isContextShown ? `${styles["contextMenuShown"]}` : "" }`}>
+         <div className={`${styles["contextMenuOptions"]}`}>
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faFlag} />
+           </button>
+           <p>Report</p> 
+          </div> 
+         </div>    
        </div>
      </div>
    );
