@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faHeartCrack, faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
@@ -312,7 +312,55 @@ const Card = (props) => {
        </div>
        <div className={`${styles["contextMenuHidden"]}
          ${ isContextShown ? `${styles["contextMenuShown"]}` : "" }`}>
-         <div className={`${styles["contextMenuOptions"]}`}>
+         <div className={`${styles["contextMenuOptionsContainer"]}`}>
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faFlag} />
+           </button>
+           <p>Report</p> 
+          </div> 
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faHeartCrack} />
+           </button>
+           <p>Not interested</p> 
+          </div> 
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faDownload} />
+           </button>
+           <p>Save</p> 
+          </div> 
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faFlag} />
+           </button>
+           <p>Report</p> 
+          </div> 
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faFlag} />
+           </button>
+           <p>Report</p> 
+          </div> 
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faFlag} />
+           </button>
+           <p>Report</p> 
+          </div> 
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faFlag} />
+           </button>
+           <p>Report</p> 
+          </div> 
+          <div className={`${styles["contextMenuOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faFlag} />
+           </button>
+           <p>Report</p> 
+          </div> 
           <div className={`${styles["contextMenuOptions"]}`}>
            <button>
             <FontAwesomeIcon icon={faFlag} />
