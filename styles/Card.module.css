@@ -65,6 +65,11 @@
 }
 .contextMenuOptionsContainer{
   display: flex;
+  flex-wrap: nowrap; 
+  overflow: auto;
+}
+.contextMenuOptions {
+    flex: 0 0 auto;
 }
 .noscroll{
   overflow: hidden;
