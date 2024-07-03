@@ -130,6 +130,10 @@ const Card = (props) => {
     if(isCommentsShown){
       toggleIsCommentsShown();
     }
+    if(isContextShown){
+      toggleIsContextShown();
+    }
+   
   }
 
   useEffect(() => 
