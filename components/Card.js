@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faA, faCircleNotch, faDownload, faHeartCrack, faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faGaugeSimpleHigh, faAnglesUp, faImages, faMobile, faA, faCircleNotch, faDownload, faHeartCrack, faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
@@ -345,27 +345,27 @@ const Card = (props) => {
           </div> 
           <div className={`${styles["contextMenuOptions"]}`}>
            <button>
-            <FontAwesomeIcon icon={faFlag} />
+            <FontAwesomeIcon icon={faMobile} />
            </button>
-           <p>Report</p> 
+           <p>Clear display</p> 
           </div> 
           <div className={`${styles["contextMenuOptions"]}`}>
            <button>
-            <FontAwesomeIcon icon={faFlag} />
+            <FontAwesomeIcon icon={faAnglesUp} />
            </button>
-           <p>Report</p> 
+           <p>Auto scroll</p> 
           </div> 
           <div className={`${styles["contextMenuOptions"]}`}>
            <button>
-            <FontAwesomeIcon icon={faFlag} />
+            <FontAwesomeIcon icon={faGaugeSimpleHigh} />
            </button>
-           <p>Report</p> 
+           <p>Playback speed</p> 
           </div> 
           <div className={`${styles["contextMenuOptions"]}`}>
            <button>
-            <FontAwesomeIcon icon={faFlag} />
+            <FontAwesomeIcon icon={faImages} />
            </button>
-           <p>Report</p> 
+           <p>Picture in picture</p> 
           </div> 
          </div>    
        </div>
