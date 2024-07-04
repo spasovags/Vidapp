@@ -371,7 +371,28 @@ const Card = (props) => {
            </button>
            <p>Picture in picture</p> 
           </div> 
-         </div>    
+         </div>  
+         <div className={`${styles["contextMenuShareWithContainer"]}`}>
+          <div className={`${styles["contextMenuShareWith"]}`}>
+           <button>
+            Share with
+           </button>
+          </div> 
+          <div className={`${styles["contextMenuShareOptions"]}`}>
+           <button>
+            <FontAwesomeIcon icon={faHeartCrack} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faDownload} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faCircleNotch} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faA} />
+           </button>
+          </div>    
+         </div> 
        </div>
      </div>
    );
