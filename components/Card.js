@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGaugeSimpleHigh, faAnglesUp, faImages, faMobile, faA, faCircleNotch, faDownload, faHeartCrack, faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faPaperclip, faComment, faChevronDown, faGaugeSimpleHigh, faAnglesUp, faImages, faMobile, faA, faCircleNotch, faDownload, faHeartCrack, faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
+import { faViber } from '@fortawesome/free-brands-svg-icons'
+
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
 
@@ -380,16 +382,16 @@ const Card = (props) => {
           </div> 
           <div className={`${styles["contextMenuShareOptions"]}`}>
            <button>
-            <FontAwesomeIcon icon={faHeartCrack} />
+            <FontAwesomeIcon icon={faPaperclip} />
            </button>
            <button>
-            <FontAwesomeIcon icon={faDownload} />
+            <FontAwesomeIcon icon={faViber} />
            </button>
            <button>
-            <FontAwesomeIcon icon={faCircleNotch} />
+            <FontAwesomeIcon icon={faComment} />
            </button>
            <button>
-            <FontAwesomeIcon icon={faA} />
+            <FontAwesomeIcon icon={faChevronDown} />
            </button>
           </div>    
          </div> 
