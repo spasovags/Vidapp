@@ -101,20 +101,20 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 0.5em 1em;
+  padding: 0.9em;
   margin: 0.5em;
   border-radius: 5px;
 }
 .contextMenuShareWith button{
   border-style: none;
   background-color: white;
-  font-weight: bold;
+  font-weight: 500;
 }
 .contextMenuShareOptions button{
  border-style: none;
  border-radius: 50px;
- padding: 0.7em;
- margin-left: 0.3em;
+ padding: 0.6em;
+ margin-left: 0.9em;
 }
 .contextMenuShareOptions button svg{
   height: 23px;
@@ -122,13 +122,13 @@
   color: white;
 }
 .contextMenuShareOptions button:first-child{
-  background-color: #5ca9ef;
+  background-color: #386bdf;
  }
  .contextMenuShareOptions button:nth-child(2){
-  background-color: rgb(147, 61, 147);
+  background-color: rgb(120, 71, 199);
  }
  .contextMenuShareOptions button:nth-child(3){
-  background-color: rgb(20, 210, 29);
+  background-color: rgb(21 199 30);
  }
  .contextMenuShareOptions button:nth-child(4){
   background-color: white;

@@ -335,7 +335,7 @@ const Card = (props) => {
            <button>
             <FontAwesomeIcon icon={faDownload} />
            </button>
-           <p>Save</p> 
+           <p>Save video</p> 
           </div> 
           <div className={`${styles["contextMenuOptions"]}`}>
            <button>
