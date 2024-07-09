@@ -24,6 +24,7 @@ const Card = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const [isContextShown, setIsContextShown] = useState(false);
+  const [isContextMenuShareOptionsHidden, setIsContextMenuShareOptionsHidden] = useState(false);
 
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
@@ -152,6 +153,9 @@ const Card = (props) => {
   }
   const toggleIsContextShown = () => {
     setIsContextShown((current) => !current);
+  };
+  const toggleIsContextMenuShareOptionsHidden = () => {
+    setIsContextMenuShareOptionsHidden((current) => !current);
   };
   function contextMenuHandle(e){
    toggleIsContextShown()
@@ -380,7 +384,8 @@ const Card = (props) => {
             Share with
            </button>
           </div> 
-          <div className={`${styles["contextMenuShareOptions"]}`}>
+          <div className={`${styles["contextMenuShareOptions"]}
+            ${ isContextMenuShareOptionsHidden ? `${styles["contextMenuShareOptionsHidden"]}` : "" }`}>
            <button>
             <FontAwesomeIcon icon={faPaperclip} />
            </button>
@@ -390,7 +395,7 @@ const Card = (props) => {
            <button>
             <FontAwesomeIcon icon={faComment} />
            </button>
-           <button>
+           <button onClick={toggleIsContextMenuShareOptionsHidden}>
             <FontAwesomeIcon icon={faChevronDown} />
            </button>
           </div>    

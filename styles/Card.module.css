@@ -110,6 +110,12 @@
   background-color: white;
   font-weight: 500;
 }
+.contextMenuShareOptionsHidden{
+  display: none;
+}
+.contextMenuShareOptions{
+  display: block;
+}
 .contextMenuShareOptions button{
  border-style: none;
  border-radius: 50px;
