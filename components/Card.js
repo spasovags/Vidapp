@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperclip, faComment, faChevronDown, faGaugeSimpleHigh, faAnglesUp, faImages, faMobile, faA, faCircleNotch, faDownload, faHeartCrack, faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faEllipsis, faEnvelope, faPaperclip, faComment, faChevronDown, faGaugeSimpleHigh, faAnglesUp, faImages, faMobile, faA, faCircleNotch, faDownload, faHeartCrack, faFlag, faChevronRight, faCircleCheck, faXmark, faGift, faAt, faPlay, faAngleRight, faCommentDots, faCirclePlus, faVolumeXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faFaceLaugh } from '@fortawesome/free-regular-svg-icons'
-import { faViber } from '@fortawesome/free-brands-svg-icons'
+import { faViber, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
@@ -136,7 +136,9 @@ const Card = (props) => {
     if(isContextShown){
       toggleIsContextShown();
     }
-   
+    if(isContextMenuShareOptionsHidden){
+      toggleIsContextMenuShareOptionsHidden();
+    }  
   }
 
   useEffect(() => 
@@ -379,7 +381,8 @@ const Card = (props) => {
           </div> 
          </div>  
          <div className={`${styles["contextMenuShareWithContainer"]}`}>
-          <div className={`${styles["contextMenuShareWith"]}`}>
+          <div className={`${styles["contextMenuShareWith"]}
+            ${ isContextMenuShareOptionsHidden ? `${styles["contextMenuShareOptionsHidden"]}` : "" }`}>
            <button>
             Share with
            </button>
@@ -398,7 +401,28 @@ const Card = (props) => {
            <button onClick={toggleIsContextMenuShareOptionsHidden}>
             <FontAwesomeIcon icon={faChevronDown} />
            </button>
-          </div>    
+          </div> 
+          <div className={`${styles["contextMenuShareOptionsAllHidden"]}
+            ${ isContextMenuShareOptionsHidden ? "" : `${styles["contextMenuShareOptionsHidden"]}` }` }>
+           <button>
+            <FontAwesomeIcon icon={faPaperclip} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faViber} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faComment} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faEnvelope} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faFacebook} />
+           </button>
+           <button>
+            <FontAwesomeIcon icon={faEllipsis} />
+           </button>     
+          </div>   
          </div> 
        </div>
      </div>

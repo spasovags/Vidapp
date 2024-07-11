@@ -110,12 +110,19 @@
   background-color: white;
   font-weight: 500;
 }
-.contextMenuShareOptionsHidden{
-  display: none;
-}
 .contextMenuShareOptions{
   display: block;
 }
+.contextMenuShareOptionsAllHidden{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2em;
+ }
+.contextMenuShareOptionsHidden{
+  display: none;
+}
+
 .contextMenuShareOptions button{
  border-style: none;
  border-radius: 50px;
@@ -127,22 +134,36 @@
   width: 24px;
   color: white;
 }
-.contextMenuShareOptions button:first-child{
+.contextMenuShareOptions button:first-child,
+.contextMenuShareOptionsAllHidden button:first-child{
   background-color: #386bdf;
  }
- .contextMenuShareOptions button:nth-child(2){
+ .contextMenuShareOptions button:nth-child(2),
+ .contextMenuShareOptionsAllHidden button:nth-child(2){
   background-color: rgb(120, 71, 199);
  }
- .contextMenuShareOptions button:nth-child(3){
+ .contextMenuShareOptions button:nth-child(3),
+ .contextMenuShareOptionsAllHidden button:nth-child(3){
   background-color: rgb(21 199 30);
  }
- .contextMenuShareOptions button:nth-child(4){
+ .contextMenuShareOptions button:nth-child(4),
+ .contextMenuShareOptionsAllHidden button:nth-child(4){
   background-color: white;
   color: black;
  }
  .contextMenuShareOptions button:nth-child(4) svg{
   color: black;
  }
+
+.contextMenuShareOptionsAllHidden  button{
+  border-style: none;
+  border-radius: 50px;
+  padding: 0.7em;
+  font-size:x-large;
+}
+
+
+
 
 .noscroll{
   overflow: hidden;
