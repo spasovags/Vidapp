@@ -47,6 +47,13 @@
 .commentSection, .reply, .contextMenuHidden{
   display: none;
 }
+.commentsShown{
+  height: 60%;
+  display: block;
+  background-color: white;
+  border-radius: 15px 15px 0px 0px;
+}
+/* CONTEXT MENU */
 .contextMenuShown{
   display: block;
   top: 50%;
@@ -57,11 +64,14 @@
   position: absolute;
   z-index: 20000;
 }
-.commentsShown{
-  height: 60%;
-  display: block;
-  background-color: white;
+.contextMenuScrollable{
+  overflow-x: hidden; 
+  overflow-y: scroll; 
+  height: 100%;
+  width: 100%;
+  background-color: rgb(232, 231, 231);
   border-radius: 15px 15px 0px 0px;
+  
 }
 .contextMenuOptionsContainer{
   display: grid;
@@ -91,6 +101,7 @@
   border-radius: 50px;
   padding: 0.7em;
   font-size:x-large;
+  width: fit-content;
 }
 .contextMenuOptions button svg{
   height: 24px;
@@ -118,6 +129,8 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 2em;
+  justify-content: space-between;
+  align-items: center;
  }
 .contextMenuShareOptionsHidden{
   display: none;
@@ -160,6 +173,7 @@
   border-radius: 50px;
   padding: 0.7em;
   font-size:x-large;
+  width: fit-content;
 }
 
 

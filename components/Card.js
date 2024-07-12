@@ -324,6 +324,7 @@ const Card = (props) => {
        </div>
        <div className={`${styles["contextMenuHidden"]}
          ${ isContextShown ? `${styles["contextMenuShown"]}` : "" }`}>
+        <div className={`${styles["contextMenuScrollable"]}`}>
          <div className={`${styles["contextMenuOptionsContainer"]}`}>
           <div className={`${styles["contextMenuOptions"]}`}>
            <button>
@@ -424,6 +425,7 @@ const Card = (props) => {
            </button>     
           </div>   
          </div> 
+        </div>
        </div>
      </div>
    );
