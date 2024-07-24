@@ -14,6 +14,8 @@ const Card = (props) => {
   const idv =`currVid_${post.id}`;
   const idLike = `bigLike_${post.id}`;
   const idCard =`currCard_${post.id}`;
+  const repostID = `repostID_${post.id}`;
+
 
   let pendingClick;
   let clicked = 0;
@@ -424,6 +426,23 @@ const Card = (props) => {
             <FontAwesomeIcon icon={faEllipsis} />
            </button>     
           </div>   
+         </div> 
+         <div className={`${styles["contextMenuFriendsListContainer"]}`}>
+          <div onClick={sendContextMenu} className={`${styles["contextMenuFriendsListItem"]}`}>
+           <Image
+                  src={`${basePathProfpics}/${post.profpic}`}
+                  width={40}
+                  height={40}
+                  alt="Picture of the author"
+            />
+           <p>
+            Repost
+           </p>
+           <button className={`${styles["nameFriendsList"]}`} >
+            Send
+           </button>
+          </div> 
+ 
          </div> 
         </div>
        </div>

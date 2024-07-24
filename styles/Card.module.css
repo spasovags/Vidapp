@@ -176,8 +176,16 @@
   width: fit-content;
 }
 
+#repostID {
+  display: none;
+}
 
+#repostID:checked + label {
+  color: white;
+  background: blue;
+}
 
+/* end of context menu*/
 
 .noscroll{
   overflow: hidden;
