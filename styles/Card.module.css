@@ -175,14 +175,13 @@
   font-size:x-large;
   width: fit-content;
 }
-
-#repostID {
-  display: none;
+/* CONTEXT MENU ITEMS */
+.contextMenuFriendsListItem:hover{
+  background-color: gray;
 }
-
-#repostID:checked + label {
+.sendButtonFriendsList{
+  background-color: red;
   color: white;
-  background: blue;
 }
 
 /* end of context menu*/

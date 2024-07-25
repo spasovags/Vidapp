@@ -14,7 +14,6 @@ const Card = (props) => {
   const idv =`currVid_${post.id}`;
   const idLike = `bigLike_${post.id}`;
   const idCard =`currCard_${post.id}`;
-  const repostID = `repostID_${post.id}`;
 
 
   let pendingClick;
@@ -27,6 +26,7 @@ const Card = (props) => {
   const [isSaved, setIsSaved] = useState(false);
   const [isContextShown, setIsContextShown] = useState(false);
   const [isContextMenuShareOptionsHidden, setIsContextMenuShareOptionsHidden] = useState(false);
+  const [isSentContextMenu, setIsSentContextMenu] = useState(false);
 
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
@@ -142,6 +142,9 @@ const Card = (props) => {
       toggleIsContextMenuShareOptionsHidden();
     }  
   }
+  const sendContextMenu = () => {
+    setIsSentContextMenu((current) => !current);  
+ };
 
   useEffect(() => 
   { props.sendDataToParent(isCommentsShown) },
@@ -429,16 +432,13 @@ const Card = (props) => {
          </div> 
          <div className={`${styles["contextMenuFriendsListContainer"]}`}>
           <div onClick={sendContextMenu} className={`${styles["contextMenuFriendsListItem"]}`}>
-           <Image
-                  src={`${basePathProfpics}/${post.profpic}`}
-                  width={40}
-                  height={40}
-                  alt="Picture of the author"
-            />
-           <p>
-            Repost
-           </p>
-           <button className={`${styles["nameFriendsList"]}`} >
+           <button onClick={sendContextMenu} className={`${styles["nameFriendsList"]}`} >
+            pick
+           </button>
+           <button onClick={sendContextMenu} className={`${styles["nameFriendsList"]}`} >
+            {replies.commentUsername}
+           </button>
+           <button onClick={sendContextMenu} className={`${styles["sendButtonFriendsList"]}`} >
             Send
            </button>
           </div> 
