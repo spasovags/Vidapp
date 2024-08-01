@@ -179,9 +179,19 @@
 .contextMenuFriendsListItem:hover{
   background-color: gray;
 }
+.contextMenuFriendsListItem{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.2em;
+
+}
 .sendButtonFriendsList{
   background-color: red;
   color: white;
+  align-self: flex-end;
+  border-style: none;
 }
 
 /* end of context menu*/

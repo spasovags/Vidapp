@@ -27,6 +27,7 @@ const Card = (props) => {
   const [isContextShown, setIsContextShown] = useState(false);
   const [isContextMenuShareOptionsHidden, setIsContextMenuShareOptionsHidden] = useState(false);
   const [isSentContextMenu, setIsSentContextMenu] = useState(false);
+  const [isSendButtonText, setIsSendButtonText] = useState("Send");
 
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
@@ -141,6 +142,11 @@ const Card = (props) => {
     if(isContextMenuShareOptionsHidden){
       toggleIsContextMenuShareOptionsHidden();
     }  
+    if(isSentContextMenu){
+      setIsSentContextMenu(false); 
+  
+      setIsSendButtonText("Send")
+    }  
   }
   useEffect(() => 
   { props.sendDataToParent(isCommentsShown) },
@@ -165,14 +171,17 @@ const Card = (props) => {
    //e.preventDefault()
   }
   const sendContextMenu = (event) => {
+    event.stopPropagation();
+
     if(!isSentContextMenu){
     setIsSentContextMenu((current) => !current); 
-    event.stopPropagation()
-    sendButtonText = "Undo";
+
+    setIsSendButtonText("Undo")
     setTimeout(() => {
-      sendButtonText = "Message";
+      setIsSendButtonText("Message")
     },    
        3000);
+
   }
  };
 
@@ -448,9 +457,7 @@ const Card = (props) => {
            <button onClick={sendContextMenu}
              className={`${styles["sendButtonFriendsList"]}
                       ${ isSentContextMenu ? `${styles["messageSentContextMenu"]}` : "" }`}>
-
-            { isSentContextMenu ? "Message" : "Send" }
-
+            { isSendButtonText }
            </button>
           </div> 
  
