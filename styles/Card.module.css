@@ -181,16 +181,20 @@
 }
 .contextMenuFriendsListItem{
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0.2em;
-
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2em;
+  width: 100%;
+}
+.contextMenuFriendsPicName{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
 }
 .sendButtonFriendsList{
-  background-color: red;
+  background-color: pink;
   color: white;
-  align-self: flex-end;
   border-style: none;
 }
 

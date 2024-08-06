@@ -27,7 +27,6 @@ const Card = (props) => {
   const [isContextShown, setIsContextShown] = useState(false);
   const [isContextMenuShareOptionsHidden, setIsContextMenuShareOptionsHidden] = useState(false);
   const [isSentContextMenu, setIsSentContextMenu] = useState(false);
-  const [isSendButtonText, setIsSendButtonText] = useState("Send");
 
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
@@ -170,20 +169,7 @@ const Card = (props) => {
    toggleIsContextShown()
    //e.preventDefault()
   }
-  const sendContextMenu = (event) => {
-    event.stopPropagation();
 
-    if(!isSentContextMenu){
-    setIsSentContextMenu((current) => !current); 
-
-    setIsSendButtonText("Undo")
-    setTimeout(() => {
-      setIsSendButtonText("Message")
-    },    
-       3000);
-
-  }
- };
 
   return (
      <div id={idCard} className={`${styles["card"]}`}>
@@ -447,20 +433,7 @@ const Card = (props) => {
           </div>   
          </div> 
          <div className={`${styles["contextMenuFriendsListContainer"]}`}>
-          <div onClick={sendContextMenu} className={`${styles["contextMenuFriendsListItem"]}`}>
-           <button onClick={sendContextMenu} className={`${styles["nameFriendsList"]}`} >
-            pick
-           </button>
-           <button onClick={sendContextMenu} className={`${styles["nameFriendsList"]}`} >
-            {replies.commentUsername}
-           </button>
-           <button onClick={sendContextMenu}
-             className={`${styles["sendButtonFriendsList"]}
-                      ${ isSentContextMenu ? `${styles["messageSentContextMenu"]}` : "" }`}>
-            { isSendButtonText }
-           </button>
-          </div> 
- 
+        
          </div> 
         </div>
        </div>

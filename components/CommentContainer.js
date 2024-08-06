@@ -7,6 +7,24 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
 const CommentContainer = (props) => {
 
+  const [isSendButtonText, setIsSendButtonText] = useState("Send");
+  
+  
+  const sendContextMenu = (event) => {
+    event.stopPropagation();
+
+    if(!isSentContextMenu){
+    setIsSentContextMenu((current) => !current); 
+
+    setIsSendButtonText("Undo")
+    setTimeout(() => {
+      setIsSendButtonText("Message")
+    },    
+       3000);
+
+  }
+ };
+
     return (
         <div className={`${styles["commentContainer"]}`} >
             <Image
