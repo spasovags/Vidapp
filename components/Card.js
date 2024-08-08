@@ -8,6 +8,7 @@ import { faViber, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
+import ContextSend from '../components/ContextSend'
 
 const Card = (props) => {
   const post = props.value;
@@ -26,7 +27,8 @@ const Card = (props) => {
   const [isSaved, setIsSaved] = useState(false);
   const [isContextShown, setIsContextShown] = useState(false);
   const [isContextMenuShareOptionsHidden, setIsContextMenuShareOptionsHidden] = useState(false);
-  const [isSentContextMenu, setIsSentContextMenu] = useState(false);
+  const [isSentFromContextMenu, setIsSentFromContextMenu] = useState(false);
+  const [isSendButtonTextParent, setIsSendButtonTextParent] = useState("");
 
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
@@ -141,10 +143,10 @@ const Card = (props) => {
     if(isContextMenuShareOptionsHidden){
       toggleIsContextMenuShareOptionsHidden();
     }  
-    if(isSentContextMenu){
-      setIsSentContextMenu(false); 
+    if(isSentFromContextMenu){
+      setIsSentFromContextMenu(false); 
   
-      setIsSendButtonText("Send")
+      setIsSendButtonTextParent("Send")
     }  
   }
   useEffect(() => 
@@ -169,7 +171,13 @@ const Card = (props) => {
    toggleIsContextShown()
    //e.preventDefault()
   }
+    // Callback function to handle data received from the
+    //child component
+const callbackContextFriendsList = (childData) => {
+      // Update the state in the component's state
+       setIsSentFromContextMenu(childData);
 
+ };
 
   return (
      <div id={idCard} className={`${styles["card"]}`}>
@@ -432,8 +440,12 @@ const Card = (props) => {
            </button>     
           </div>   
          </div> 
-         <div className={`${styles["contextMenuFriendsListContainer"]}`}>
-        
+         <div
+          className={`${styles["contextMenuFriendsListContainer"]}`}>
+          <ContextSend 
+           callFunc= {callbackContextFriendsList}
+           buttonTextFromParent={isSendButtonTextParent}/>
+
          </div> 
         </div>
        </div>

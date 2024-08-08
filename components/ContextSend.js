@@ -1,15 +1,35 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/ContextSend.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
-
 
 const ContextSend = (props) => {
 
+  const [isSentContextMenu, setIsSentContextMenu] = useState(false);
+
+  const [isSendButtonText, setIsSendButtonText] = useState("Send");
+  
+  
+  const sendContextMenu = (event) => {
+    event.stopPropagation();
+
+    if(!isSentContextMenu){
+    setIsSentContextMenu((current) => !current); 
+
+    setIsSendButtonText("Undo")
+    setTimeout(() => {
+      setIsSendButtonText("Message")
+    },    
+       3000);
+
+  }
+ };
+
+
     return (
-        <div onClick={sendContextMenu} className={`${styles["contextMenuFriendsListItem"]}`}>
-        <div className={`${styles["contextMenuFriendsPicName"]}`}>
+        <div onClick={sendContextMenu}
+         className={`${styles["contextMenuFriendsListItem"]}`}>
+        <div
+         className={`${styles["contextMenuFriendsPicName"]}`}>
          <button onClick={sendContextMenu} className={`${styles["nameFriendsList"]}`} >
          <Image
               src={props.replies.profpicComment}
