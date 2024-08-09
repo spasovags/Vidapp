@@ -17,7 +17,8 @@ const ContextSend = (props) => {
 
     setIsSendButtonText("Undo")
     setTimeout(() => {
-      setIsSendButtonText("Message")
+      setIsSendButtonText("Message");
+      props.callFunc(isSentContextMenu);
     },    
        3000);
 

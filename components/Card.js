@@ -444,8 +444,8 @@ const callbackContextFriendsList = (childData) => {
           className={`${styles["contextMenuFriendsListContainer"]}`}>
           <ContextSend 
            callFunc= {callbackContextFriendsList}
-           buttonTextFromParent={isSendButtonTextParent}/>
-
+           replies={replies}
+           buttonText = {isSendButtonTextParent}/>
          </div> 
         </div>
        </div>
