@@ -28,7 +28,9 @@ const Card = (props) => {
   const [isContextShown, setIsContextShown] = useState(false);
   const [isContextMenuShareOptionsHidden, setIsContextMenuShareOptionsHidden] = useState(false);
   const [isSentFromContextMenu, setIsSentFromContextMenu] = useState(false);
-  const [isSendButtonTextParent, setIsSendButtonTextParent] = useState("");
+
+  const [isSentContextMenu, setIsSentContextMenu] = useState(false);
+  const [isSendButtonText, setIsSendButtonText] = useState("Send"); 
 
   const basePath = '/videos';
   const basePathProfpics = '/profpics';
@@ -143,11 +145,8 @@ const Card = (props) => {
     if(isContextMenuShareOptionsHidden){
       toggleIsContextMenuShareOptionsHidden();
     }  
-    if(isSentFromContextMenu){
-      setIsSentFromContextMenu(false); 
-  
-      setIsSendButtonTextParent("Send")
-    }  
+     setIsSendButtonText("Send");
+ 
   }
   useEffect(() => 
   { props.sendDataToParent(isCommentsShown) },
@@ -171,13 +170,22 @@ const Card = (props) => {
    toggleIsContextShown()
    //e.preventDefault()
   }
-    // Callback function to handle data received from the
-    //child component
-const callbackContextFriendsList = (childData) => {
-      // Update the state in the component's state
-       setIsSentFromContextMenu(childData);
 
- };
+  
+ const sendContextMenu = (event) => {
+  event.stopPropagation();
+
+  if(!isSentContextMenu){
+  setIsSentContextMenu((current) => !current); 
+
+  setIsSendButtonText("Undo")
+  setTimeout(() => {
+    setIsSendButtonText("Message");
+  },    
+     3000);
+
+}
+};
 
   return (
      <div id={idCard} className={`${styles["card"]}`}>
@@ -443,9 +451,10 @@ const callbackContextFriendsList = (childData) => {
          <div
           className={`${styles["contextMenuFriendsListContainer"]}`}>
           <ContextSend 
-           callFunc= {callbackContextFriendsList}
+           clickFunc= {sendContextMenu}
            replies={replies}
-           buttonText = {isSendButtonTextParent}/>
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
          </div> 
         </div>
        </div>

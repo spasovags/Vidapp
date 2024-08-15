@@ -1,0 +1,30 @@
+.contextMenuFriendsPicName{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+  }
+  .sendButtonFriendsList{
+    background-color: pink;
+    color: white;
+    border-style: none;
+  }
+  .contextMenuShareOptionsAllHidden button{
+    border-style: none;
+    border-radius: 50px;
+    padding: 0.7em;
+    font-size:x-large;
+    width: fit-content;
+  }
+  /* CONTEXT MENU ITEMS */
+  .contextMenuFriendsListItem:hover{
+    background-color: gray;
+  }
+  .contextMenuFriendsListItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2em;
+    width: 100%;
+  }
+  

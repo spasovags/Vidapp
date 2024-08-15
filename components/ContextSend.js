@@ -1,31 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../styles/ContextSend.module.css'
 
 const ContextSend = (props) => {
 
-  const [isSentContextMenu, setIsSentContextMenu] = useState(false);
-
-  const [isSendButtonText, setIsSendButtonText] = useState("Send");
-  
-  
   const sendContextMenu = (event) => {
     event.stopPropagation();
 
-    if(!isSentContextMenu){
-    setIsSentContextMenu((current) => !current); 
-
-    setIsSendButtonText("Undo")
-    setTimeout(() => {
-      setIsSendButtonText("Message");
-      props.callFunc(isSentContextMenu);
-    },    
-       3000);
-
-  }
- };
-
-
+    props.clickFunc(event)
+  };
     return (
         <div onClick={sendContextMenu}
          className={`${styles["contextMenuFriendsListItem"]}`}>
@@ -45,8 +28,8 @@ const ContextSend = (props) => {
         </div>
         <button onClick={sendContextMenu}
           className={`${styles["sendButtonFriendsList"]}
-                   ${ isSentContextMenu ? `${styles["messageSentContextMenu"]}` : "" }`}>
-         { isSendButtonText }
+                   ${ props.isSentContextMenu ? `${styles["messageSentContextMenu"]}` : "" }`}>
+         { props.buttonText }
         </button>   
      </div>
     ) 
