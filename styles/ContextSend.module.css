@@ -4,10 +4,26 @@
     justify-content: flex-start;
     
   }
+  .pickFriendsList{
+    border-style: none;
+    border-radius: 50px;
+    background-color: transparent;
+  }
+  .pickFriendsList img{
+    border-radius: 50px;
+    height: 100%;
+  }
+  .nameFriendsList{
+    border-style: none;
+    background-color: transparent;
+    font-weight: 400;
+  }
   .sendButtonFriendsList{
-    background-color: pink;
+    background-color: #2c44fe;
     color: white;
     border-style: none;
+    border-radius: 5px;
+    padding: 0.3em 2em;
   }
   .contextMenuShareOptionsAllHidden button{
     border-style: none;

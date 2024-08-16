@@ -168,7 +168,12 @@
   color: black;
  }
 
-
+.contextMenuFriendsListContainer{
+  background-color: white;
+  padding: 0.9em;
+  margin: 0.5em;
+  border-radius: 5px;
+}
 
 /* end of context menu*/
 

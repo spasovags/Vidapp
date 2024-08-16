@@ -455,6 +455,42 @@ const Card = (props) => {
            replies={replies}
            buttonText = {isSendButtonText}
            isSentContextMenu={isSentContextMenu}/>
+           <ContextSend 
+           clickFunc= {sendContextMenu}
+           replies={replies0}
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
+          <ContextSend 
+           clickFunc= {sendContextMenu}
+           replies={replies1}
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
+           <ContextSend 
+           clickFunc= {sendContextMenu}
+           replies={replies2}
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
+          <ContextSend 
+           clickFunc= {sendContextMenu}
+           replies={replies}
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
+           <ContextSend 
+           clickFunc= {sendContextMenu}
+           replies={replies0}
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
+          <ContextSend 
+           clickFunc= {sendContextMenu}
+           replies={replies1}
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
+           <ContextSend 
+           clickFunc= {sendContextMenu}
+           replies={replies2}
+           buttonText = {isSendButtonText}
+           isSentContextMenu={isSentContextMenu}/>
+        
          </div> 
         </div>
        </div>

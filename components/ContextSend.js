@@ -14,7 +14,8 @@ const ContextSend = (props) => {
          className={`${styles["contextMenuFriendsListItem"]}`}>
         <div
          className={`${styles["contextMenuFriendsPicName"]}`}>
-         <button onClick={sendContextMenu} className={`${styles["nameFriendsList"]}`} >
+         <button onClick={sendContextMenu}
+         className={`${styles["pickFriendsList"]}`} >
          <Image
               src={props.replies.profpicComment}
               width={40}
@@ -22,7 +23,8 @@ const ContextSend = (props) => {
               alt="Picture of the author"
             />
          </button>
-         <button onClick={sendContextMenu} className={`${styles["nameFriendsList"]}`} >
+         <button onClick={sendContextMenu}
+         className={`${styles["nameFriendsList"]}`} >
           {props.replies.commentUsername}
          </button>
         </div>
