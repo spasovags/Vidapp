@@ -8,7 +8,7 @@ import { faViber, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { motion } from "framer-motion";
 import CommentContainer from '../components/CommentContainer'
-import ContextSend from '../components/ContextSend'
+import ContextSendContainer from '../components/ContextSendContainer'
 
 const Card = (props) => {
   const post = props.value;
@@ -448,50 +448,7 @@ const Card = (props) => {
            </button>     
           </div>   
          </div> 
-         <div
-          className={`${styles["contextMenuFriendsListContainer"]}`}>
-          <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-           <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies0}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-          <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies1}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-           <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies2}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-          <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-           <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies0}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-          <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies1}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-           <ContextSend 
-           clickFunc= {sendContextMenu}
-           replies={replies2}
-           buttonText = {isSendButtonText}
-           isSentContextMenu={isSentContextMenu}/>
-        
-         </div> 
+         <ContextSendContainer/>
         </div>
        </div>
      </div>
