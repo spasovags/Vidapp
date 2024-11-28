@@ -4,11 +4,29 @@ import styles from '../styles/ContextSend.module.css'
 
 const ContextSend = (props) => {
 
-  const sendContextMenu = (event) => {
+ /* const sendContextMenu = (event) => {
     event.stopPropagation();
 
     props.clickFunc(event)
+  };*/
+  const [isSendButtonText, setIsSendButtonText] = useState("Send"); 
+  const [isSentContextMenu, setIsSentContextMenu] = useState(false);
+
+  const sendContextMenu = (event) => {
+    event.stopPropagation();
+  
+    if(!isSentContextMenu){
+    setIsSentContextMenu((current) => !current); 
+  
+    setIsSendButtonText("Undo")
+    setTimeout(() => {
+      setIsSendButtonText("Message");
+    },    
+       3000);
+  
+  }
   };
+
     return (
         <div onClick={sendContextMenu}
          className={`${styles["contextMenuFriendsListItem"]}`}>
@@ -30,8 +48,8 @@ const ContextSend = (props) => {
         </div>
         <button onClick={sendContextMenu}
           className={`${styles["sendButtonFriendsList"]}
-                   ${ props.isSentContextMenu ? `${styles["messageSentContextMenu"]}` : "" }`}>
-         { props.buttonText }
+                   ${ isSentContextMenu ? `${styles["messageSentContextMenu"]}` : "" }`}>
+         { isSendButtonText }
         </button>   
      </div>
     ) 

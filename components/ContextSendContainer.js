@@ -13,10 +13,7 @@ const ContextSendContainer = () => {
   if (!data) return <div>Loading...</div>
 
   const userdata = JSON.parse(data)
-
-  
-    const [isSendButtonText, setIsSendButtonText] = useState("Send"); 
-    const [isSentContextMenu, setIsSentContextMenu] = useState(false);
+ 
     const basePathProfpics = '/profpics';
     const friendsContext = [
         { profpicComment: `${basePathProfpics}/${userdata[0].profpic}`,
@@ -28,31 +25,17 @@ const ContextSendContainer = () => {
         { profpicComment: `${basePathProfpics}/${userdata[3].profpic}`,
         commentUsername: "ssddddddddxx"}
         ];
-  
-        const sendContextMenu = (event) => {
-            event.stopPropagation();
-          
-            if(!isSentContextMenu){
-            setIsSentContextMenu((current) => !current); 
-          
-            setIsSendButtonText("Undo")
-            setTimeout(() => {
-              setIsSendButtonText("Message");
-            },    
-               3000);
-          
-          }
-          };
-          
+  // put this function and variables in Contextsend
+       
    return (   
     <div
     className={`${styles["contextMenuFriendsListContainer"]}`}>
           {friendsContext.map((friend) =>
             <ContextSend 
-              clickFunc= {sendContextMenu}
+             /* clickFunc= {sendContextMenu}*/
               replies={friend}
-              buttonText = {isSendButtonText}
-              isSentContextMenu={isSentContextMenu}/>
+              /*buttonText = {isSendButtonText}
+              isSentContextMenu={isSentContextMenu}*//>
      
            )}
     </div>
