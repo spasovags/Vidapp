@@ -28,7 +28,7 @@ const ContextSend = (props) => {
   };
 
     return (
-        <div onClick={sendContextMenu}
+      <div onClick={sendContextMenu}
          className={`${styles["contextMenuFriendsListItem"]}`}>
         <div
          className={`${styles["contextMenuFriendsPicName"]}`}>
@@ -51,7 +51,7 @@ const ContextSend = (props) => {
                    ${ isSentContextMenu ? `${styles["messageSentContextMenu"]}` : "" }`}>
          { isSendButtonText }
         </button>   
-     </div>
+      </div>
     ) 
 }
 

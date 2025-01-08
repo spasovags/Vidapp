@@ -1,0 +1,20 @@
+.InboxFriendsTopItemContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    flex-direction: column;
+}
+.picFriendsTopItem{
+    border-style: none;
+    border-radius: 50px;
+    background-color: transparent;
+}
+.picFriendsTopItem img{
+    border-radius: 50px;
+    height: 100%;
+}
+.nameFriendsTopItem{
+    border-style: none;
+    background-color: transparent;
+    font-weight: 400; 
+}
