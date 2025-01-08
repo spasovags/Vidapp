@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Card from '../components/Card'
 import styles from '../styles/CardList.module.css'
-
+import Navbar from './Navbar'
 
 const CardList = ({technologies}) => {
   const idSect ="currCar";
@@ -19,10 +19,13 @@ const CardList = ({technologies}) => {
   }
 
    return (   
-    <section id={idSect} className={`${styles["techstack-container"]}`}>
+    <>
+     <Navbar />
+     <section id={idSect} className={`${styles["techstack-container"]}`}>
        {technologies.map((technology, index) =>
         <Card sendDataToParent={handleDataFromChild} key={technology.id} indexAnim={index} value={technology}/>)}       
-    </section>
+     </section>
+    </>
   )
 }
 
