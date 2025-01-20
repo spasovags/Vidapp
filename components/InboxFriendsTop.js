@@ -4,11 +4,24 @@ import styles from '../styles/InboxFriendsTop.module.css'
 
 const InboxFriendsTop = (props) => {
 
- /* const sendContextMenu = (event) => {
-    event.stopPropagation();
+  const activitySent = props.friendTop.activity;
 
-    props.clickFunc(event)
-  };*/
+  const sendContextMenu = () => {
+    const activity = props.friendTop.activity;
+    switch (activity) {
+      case 'add':
+        console.log('');
+        break;
+      case 'none':
+      case 'online':
+      case 'live':
+        console.log('');
+        break;
+      default:
+        console.log(``);
+    }
+  };
+
   const [isSendButtonText, setIsSendButtonText] = useState("Send"); 
   const [isSentContextMenu, setIsSentContextMenu] = useState(false);
 
@@ -20,20 +33,29 @@ const InboxFriendsTop = (props) => {
     return (
       <div
         className={`${styles["InboxFriendsTopItemContainer"]}`}>
+         <div
+        className={`${styles["photoTopItemContainer"]}`}>
+
          <button onClick={openChat}
          className={`${styles["picFriendsTopItem"]}`} >
          <Image
               src={props.friendTop.profpic}
-              width={40}
-              height={40}
+              width={70}
+              height={70}
               alt="Picture of the author"
             />
-         </button>
+         </button> 
+         <button
+         className={`${styles[activitySent]}`} >
+          {props.friendTop.activity}
+         </button>      
+         </div>  
+
          <button onClick={openChat}
          className={`${styles["nameFriendsTopItem"]}`} >
           {props.friendTop.username}
-         </button>      
-      </div>
+         </button>   
+     </div>
     ) 
 }
 

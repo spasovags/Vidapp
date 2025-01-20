@@ -18,3 +18,17 @@
     background-color: transparent;
     font-weight: 400; 
 }
+.photoTopItemContainer{
+    position: relative;
+
+}
+.add,.none, .online, .live{
+    border-radius: 50px;
+    position: absolute;
+    border-style: none;
+    right: 0px;
+    bottom: 0px;
+}
+.add {
+    background-color:aqua;
+}

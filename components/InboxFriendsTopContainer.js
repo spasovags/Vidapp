@@ -18,25 +18,30 @@ const InboxFriendsTopContainer = (props) => {
  
     const basePathProfpics = '/profpics';
     const friendsTop = [
-        { profpic: `${basePathProfpics}/${userdata[0].profpic}`,
-        username: "John"},
+        { profpic: `${basePathProfpics}/${userdata[11].profpic}`,
+        username: "Create",
+        activity: "add"},
         { profpic: `${basePathProfpics}/${userdata[1].profpic}`,
-        username: "Doe"},
+        username: "JDoe",
+        activity: "live"},
         { profpic: `${basePathProfpics}/${userdata[2].profpic}`,
-        username: "ur mom"},
+        username: "ur mom",
+        activity: "online"},
         { profpic: `${basePathProfpics}/${userdata[3].profpic}`,
-        username: "pookie"}
+        username: "blahbla bl",
+        activity: "none"}
         ]; 
+  
 
     return (
       <div
       className={`${styles["InboxFriendsTopContainer"]}`}>
-            {friendsTop.map((friend) =>
+           {friendsTop.map((friend) =>
               <InboxFriendsTop 
                 friendTop={friend}
               />
        
-             )}
+           )}
       </div>
     ) 
 }
