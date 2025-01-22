@@ -47,7 +47,7 @@ const InboxFriendsTop = (props) => {
          </button> 
          <button
          className={`${styles[activitySent]}`} >
-          {props.friendTop.activity}
+          +
          </button>      
          </div>  
 

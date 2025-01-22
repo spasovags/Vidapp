@@ -1,6 +1,10 @@
 .InboxFriendsTopContainer{
+    overflow: auto;
     display: flex;
     align-items: center;
     width: 100%; 
     gap: 0.3em;
 }
+.InboxFriendsTopContainer::-webkit-scrollbar {
+    display: none;
+  }

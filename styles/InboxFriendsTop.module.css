@@ -26,9 +26,24 @@
     border-radius: 50px;
     position: absolute;
     border-style: none;
-    right: 0px;
-    bottom: 0px;
+    right: 6px;
+    bottom: 6px;
+    color: transparent;
+    font-size: medium;
 }
 .add {
-    background-color:aqua;
+    background-color:#00d3ff;
+    color: white;
+}
+.online{
+    background-color: rgb(64, 167, 64);
+    color: transparent;   
+}
+.live{
+    background-color:#a6045a;
+    color: transparent;
+    
+}
+.none{
+    display: none;
 }
