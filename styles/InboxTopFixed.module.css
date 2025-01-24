@@ -1,5 +1,22 @@
 .InboxTopFixedContainer{
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+}
+.newChat{
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    border-width: 0.2em;
+    font-weight: bolder;
+}
+.searchTopFixed {
+        height: 21px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+      
 }
