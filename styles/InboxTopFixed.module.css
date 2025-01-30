@@ -12,6 +12,26 @@
     border-radius: 50px;
     border-width: 0.2em;
     font-weight: bolder;
+    padding: 1px 3px;
+}
+.inboxTopCenter{
+    background-color: transparent;
+    border-style: none;
+}
+.statusTopCenter{
+    background-color:rgb(241 249 249);
+    border-style: none;
+    font-weight: bold;
+    margin: 0px 0.2em;
+}
+.statusTopCenter svg:first-child{
+  color: chartreuse;
+  font-size: xx-small;
+  margin-right: 0.6em;
+}
+.statusTopCenter svg:nth-child(2){
+    color: rgb(113, 114, 111);
+    font-size: xx-small;
 }
 .searchTopFixed {
         height: 21px;
