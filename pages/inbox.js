@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/inbox.module.css'
 import InboxFriendsTopContainer from '../components/InboxFriendsTopContainer'
 import InboxTopFixed from '../components/InboxTopFixed'
+import InboxFriendsListContainer from '../components/InboxFriendsListContainer'
 
 const inbox = () => {
 
@@ -34,6 +35,7 @@ const inbox = () => {
          className={`${styles["inboxContainer"]}`}>
          <InboxTopFixed/>
          <InboxFriendsTopContainer/>
+         <InboxFriendsListContainer/>
         </div>
     ) 
 }
