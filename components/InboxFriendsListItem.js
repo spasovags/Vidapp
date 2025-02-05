@@ -6,27 +6,33 @@ const InboxFriendsListItem = (props) => {
 
 
     return (
-      <div onClick={sendContextMenu}
-         className={`${styles["contextMenuFriendsListItem"]}`}>
-        <div
-         className={`${styles["contextMenuFriendsPicName"]}`}>
-         <button onClick={sendContextMenu}
-         className={`${styles["pickFriendsList"]}`} >
+      <div 
+         className={`${styles["friendsItemInbox"]}`}>
+         <button 
+         className={`${styles["friendsItemInboxPict"]}`} >
          <Image
-              src={props.replies.profpicComment}
+              src={props.friendInbox.profpic}
               width={40}
               height={40}
               alt="Picture of the author"
             />
          </button>
-         <button onClick={sendContextMenu}
-         className={`${styles["nameFriendsList"]}`} >
-          {props.replies.commentUsername}
+         
+        <div
+         className={`${styles["inboxFriendsNameAction"]}`}>
+         <button 
+         className={`${styles["inboxFriendsName"]}`} >
+          {props.friendInbox.username}
          </button>
+         <button 
+         className={`${styles["inboxFriendsAction"]}`} >
+          {props.friendInbox.action}
+         </button>        
         </div>
-        <button onClick={sendContextMenu}
-                className={`${styles["nameFriendsList"]}`} >
-        { isSendButtonText }
+
+        <button 
+                className={`${styles["inboxFriendsCount"]}`} >
+        { props.friendInbox.count }
         </button>   
       </div>
     ) 

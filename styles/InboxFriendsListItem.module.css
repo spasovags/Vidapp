@@ -1,0 +1,42 @@
+.friendsItemInbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.friendsItemInboxPict,
+.inboxFriendsNameAction button{
+    border-style: none;
+    background-color: transparent;
+            
+}
+.friendsItemInboxPict img{
+     border-radius: 50px;
+}
+.inboxFriendsNameAction{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+
+}
+.inboxFriendsName{
+   font-weight: bold;
+}
+.inboxFriendsAction{
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+.inboxFriendsCount{
+    border-style: none;
+    background-color: purple;
+    color: white;
+    border-radius: 50px;
+    padding-left: 6px;
+    height: 17px;
+    width: 27px;
+    padding-bottom: 20px;
+    padding-top: 6px;
+    margin-bottom: 1px;
+}
