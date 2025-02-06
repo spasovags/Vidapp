@@ -18,12 +18,12 @@ const InboxFriendsListContainer = (props) => {
  
     const basePathProfpics = '/profpics';
     const friendsTop = [
-        { profpic: `${basePathProfpics}/${userdata[11].profpic}`,
+        { profpic: `${basePathProfpics}/${userdata[12].profpic}`,
         username: "New followers",
         date: "2d",
         count: "3",
         action: "uhg started following you"},
-        { profpic: `${basePathProfpics}/${userdata[1].profpic}`,
+        { profpic: `${basePathProfpics}/${userdata[13].profpic}`,
         username: "Activity",
         date: "9/1",
         count: "13",

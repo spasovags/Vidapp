@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     padding: 6px;
+    background-color: white;
 }
 .newChat{
     background-color: white;
