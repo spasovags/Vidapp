@@ -22,11 +22,16 @@
 
 }
 .inboxFriendsName{
-   font-weight: 550;
+   font-weight: 400;
 }
 .inboxFriendsAction{
-    font-weight: 550;
+    font-weight: 400;
     font-size: 0.7rem;
+}
+.inboxFriendsAction span{
+    font-weight:100;
+    color: #BCBCBC;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .inboxFriendsCount{
     border-style: none;

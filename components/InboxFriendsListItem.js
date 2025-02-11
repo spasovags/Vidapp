@@ -26,7 +26,7 @@ const InboxFriendsListItem = (props) => {
          </button>
          <button 
          className={`${styles["inboxFriendsAction"]}`} >
-          {props.friendInbox.action}
+          {props.friendInbox.action} <span>{props.friendInbox.date}</span>
          </button>        
         </div>
 
