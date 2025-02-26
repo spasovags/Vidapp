@@ -3,6 +3,14 @@
     align-items: center;
     justify-content: space-around;  
     flex-direction: column;
+    border-width: 5px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+              to bottom, 
+                    red, 
+                          rgba(0, 0, 0, 0)
+                              ) 1 100%;
 }
 .picFriendsTopItem{
     border-style: none;
@@ -41,6 +49,10 @@
 }
 .live{
     background-color:#a6045a;
+    background-image: url(../public/liveGif.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: transparent;
     
 }

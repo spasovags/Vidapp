@@ -34,21 +34,21 @@ const InboxFriendsTop = (props) => {
       <div
         className={`${styles["InboxFriendsTopItemContainer"]}`}>
          <div
-        className={`${styles["photoTopItemContainer"]}`}>
+          className={`${styles["photoTopItemContainer"]}`}>
 
-         <button onClick={openChat}
-         className={`${styles["picFriendsTopItem"]}`} >
-         <Image
-              src={props.friendTop.profpic}
-              width={70}
-              height={70}
-              alt="Picture of the author"
-            />
-         </button> 
-         <button
-         className={`${styles[activitySent]}`} >
-          +
-         </button>      
+           <button onClick={openChat}
+             className={`${styles["picFriendsTopItem"]}`} >
+              <Image
+               src={props.friendTop.profpic}
+               width={70}
+               height={70}
+               alt="Picture of the author"
+              />
+           </button> 
+           <button
+            className={`${styles[activitySent]}`} >
+              +
+           </button>      
          </div>  
 
          <button onClick={openChat}
