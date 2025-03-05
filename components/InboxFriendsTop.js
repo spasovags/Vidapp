@@ -5,6 +5,7 @@ import styles from '../styles/InboxFriendsTop.module.css'
 const InboxFriendsTop = (props) => {
 
   const activitySent = props.friendTop.activity;
+  const hasStory = props.friendTop.hasStory;
 
   const sendContextMenu = () => {
     const activity = props.friendTop.activity;
@@ -29,7 +30,6 @@ const InboxFriendsTop = (props) => {
   
   }
 
-
     return (
       <div
         className={`${styles["InboxFriendsTopItemContainer"]}`}>
@@ -37,8 +37,9 @@ const InboxFriendsTop = (props) => {
           className={`${styles["photoTopItemContainer"]}`}>
 
            <button onClick={openChat}
-             className={`${styles["picFriendsTopItem"]}`} >
-              <Image
+             className={`${styles["picFriendsTopItem"+activitySent]}
+                     ${ hasStory ? `${styles["friendsTopStory"]}` : ""  }`} >
+             <Image
                src={props.friendTop.profpic}
                width={70}
                height={70}

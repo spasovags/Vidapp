@@ -20,22 +20,28 @@ const InboxFriendsTopContainer = (props) => {
     const friendsTop = [
         { profpic: `${basePathProfpics}/${userdata[11].profpic}`,
         username: "Create",
-        activity: "add"},
+        activity: "add",
+        hasStory: false},
         { profpic: `${basePathProfpics}/${userdata[1].profpic}`,
         username: "JDoe",
-        activity: "live"},
+        activity: "live",
+        hasStory: false},
         { profpic: `${basePathProfpics}/${userdata[2].profpic}`,
         username: "ur mom",
-        activity: "online"},
+        activity: "online",
+        hasStory: true},
         { profpic: `${basePathProfpics}/${userdata[3].profpic}`,
         username: "blahbla bl",
-        activity: "none"},        
+        activity: "none",
+        hasStory: true},        
         { profpic: `${basePathProfpics}/${userdata[2].profpic}`,
         username: "ur mom",
-        activity: "online"},
+        activity: "online",
+        hasStory: false},
         { profpic: `${basePathProfpics}/${userdata[3].profpic}`,
         username: "blahbla bl",
-        activity: "none"}
+        activity: "none",
+        hasStory: false}
       
         ]; 
   

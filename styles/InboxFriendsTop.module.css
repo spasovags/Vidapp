@@ -3,23 +3,42 @@
     align-items: center;
     justify-content: space-around;  
     flex-direction: column;
-    border-width: 5px;
-    border-style: solid;
-    border-image: 
-        linear-gradient(
-              to bottom, 
-                    red, 
-                          rgba(0, 0, 0, 0)
-                              ) 1 100%;
-}
-.picFriendsTopItem{
-    border-style: none;
+   }
+.picFriendsTopItemlive,
+.picFriendsTopItemadd,
+.picFriendsTopItemnone,
+.picFriendsTopItemonline {
+    background: white;
+    background-clip: padding-box;
+  /* !importanté */
+    border: solid 2px white;
+    position: relative;
     border-radius: 50px;
-    background-color: transparent;
+    padding: 0;
+    height: 70px;
+  }
+.picFriendsTopItemlive:before,
+.picFriendsTopItemadd:before,
+.picFriendsTopItemnone:before,
+.picFriendsTopItemonline:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -5px;
+      border-radius: inherit;
+      background: transparent;
 }
-.picFriendsTopItem img{
+.picFriendsTopItemlive img,
+.picFriendsTopItemadd img,
+.picFriendsTopItemnone img,
+.picFriendsTopItemonline img{
     border-radius: 50px;
     height: 100%;
+    
 }
 .nameFriendsTopItem{
     border-style: none;
@@ -55,6 +74,13 @@
     background-size: cover;
     color: transparent;
     
+}
+.picFriendsTopItemlive:before{
+    background: linear-gradient(to right, #F92A7A, #F54796);
+}
+.friendsTopStory:before{
+    background: linear-gradient(to right, #5DC9FA, #7CFFD0);
+
 }
 .none{
     display: none;
