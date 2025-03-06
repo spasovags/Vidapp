@@ -5,6 +5,7 @@
     width: 100%; 
     gap: 1em;
     margin-top: 1.5em;
+    padding-top: 0.5em;
 }
 .InboxFriendsTopContainer::-webkit-scrollbar {
     display: none;
