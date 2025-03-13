@@ -41,6 +41,10 @@ const InboxFriendsTopContainer = (props) => {
         { profpic: `${basePathProfpics}/${userdata[3].profpic}`,
         username: "blahbla bl",
         activity: "none",
+        hasStory: false},
+        { profpic: `${basePathProfpics}/${userdata[14].profpic}`,
+        username: "+ Widget",
+        activity: "none",
         hasStory: false}
       
         ]; 

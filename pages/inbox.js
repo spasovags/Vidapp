@@ -4,6 +4,7 @@ import styles from '../styles/inbox.module.css'
 import InboxFriendsTopContainer from '../components/InboxFriendsTopContainer'
 import InboxTopFixed from '../components/InboxTopFixed'
 import InboxFriendsListContainer from '../components/InboxFriendsListContainer'
+import FooterWhite from '../components/FooterWhite'
 
 const inbox = () => {
 
@@ -36,6 +37,7 @@ const inbox = () => {
          <InboxTopFixed/>
          <InboxFriendsTopContainer/>
          <InboxFriendsListContainer/>
+         <FooterWhite/>
         </div>
     ) 
 }

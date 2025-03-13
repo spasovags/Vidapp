@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@500&display=swap');
+
+.footer-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7svh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    color: #9E9E9E;
+    margin-bottom: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style:none;
+    font-size: small;
+    font-weight: lighter;
+    z-index: 1011;
+}
+.footer-container a {
+   text-decoration: none;
+   color: #7c7c7c;
+   font-weight: 400;
+   margin: 0;
+   padding: 0;
+}
+.footer-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+/*media queries*/
+@media (min-width: 600px) {
+
+}

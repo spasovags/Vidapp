@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import CardList from '../components/CardList'
 import useSWR from 'swr'
+import Footer from '../components/Footer'
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -29,6 +30,7 @@ export default function Home() {
      </Head>
       
       <CardList technologies={techno}/>
+      <Footer/>
     </main>
     </>
   )
