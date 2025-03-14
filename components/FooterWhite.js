@@ -2,11 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/FooterWhite.module.css'
-import home from "../public/footerIcons/Home.jpg"
-import friends from "../public/footerIcons/Friends.jpg"
-import add from "../public/footerIcons/Add.jpg"
-import inbox from "../public/footerIcons/Inbox.jpg"
-import profile from "../public/footerIcons/Profile.jpg"
+import home from "../public/footerIcons/HomeWhite.jpg"
+import friends from "../public/footerIcons/FriendsWhite.jpg"
+import add from "../public/footerIcons/AddWhite.jpg"
+import inbox from "../public/footerIcons/InboxWhite.jpg"
+import profile from "../public/footerIcons/ProfileWhite.jpg"
 
 const Footer = () => {
   const footerWidth = 30;

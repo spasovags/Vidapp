@@ -2,20 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Footer.module.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useInView } from 'react-intersection-observer';
 import home from "../public/footerIcons/Home.jpg"
 import friends from "../public/footerIcons/Friends.jpg"
 import add from "../public/footerIcons/Add.jpg"
 import inbox from "../public/footerIcons/Inbox.jpg"
 import profile from "../public/footerIcons/Profile.jpg"
-
-import {
-  faLinkedin,
-  faGithub,
-  faYoutube,
-  faDev
-} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const footerWidth = 30;
