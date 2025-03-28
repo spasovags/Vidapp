@@ -4,6 +4,19 @@
     justify-content: space-around;  
     flex-direction: column;
    }
+.addThoughtButton,
+.userHasNoMessage{
+    background-color: white;
+    border-radius: 10px;
+}
+.addThoughtButton{
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.1);
+    border-style: none;
+}
+.userHasNoMessage{
+  color: #605f60;
+  border-style: none;
+}
 .picFriendsTopItemlive,
 .picFriendsTopItemadd,
 .picFriendsTopItemnone,

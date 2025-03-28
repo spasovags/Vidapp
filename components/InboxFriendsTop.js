@@ -6,6 +6,7 @@ const InboxFriendsTop = (props) => {
 
   const activitySent = props.friendTop.activity;
   const hasStory = props.friendTop.hasStory;
+  const userThoughtNoMessage = props.friendTop.username === 'Create' ? true : false;
 
   const sendContextMenu = () => {
     const activity = props.friendTop.activity;
@@ -23,16 +24,25 @@ const InboxFriendsTop = (props) => {
     }
   };
 
-  const [isSendButtonText, setIsSendButtonText] = useState("Send"); 
-  const [isSentContextMenu, setIsSentContextMenu] = useState(false);
-
   const openChat = (event) => {
   
   }
-
+console.log(' uset ', userThoughtNoMessage);
     return (
       <div
         className={`${styles["InboxFriendsTopItemContainer"]}`}>
+        <div
+          className={`${styles["inboxTopThought"]}`}>
+
+           <button onClick={openChat}
+             className={`${styles["addThoughtButton"]}
+                     ${ userThoughtNoMessage ? `${styles["userHasNoMessage"]}` : ""  }`} >
+            {props.friendTop.thought}
+            
+           </button> 
+             
+         </div>  
+
          <div
           className={`${styles["photoTopItemContainer"]}`}>
 
