@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-around;  
     flex-direction: column;
+    position: relative;
    }
 .addThoughtButton,
 .userHasNoMessage{
@@ -10,12 +11,24 @@
     border-radius: 10px;
 }
 .addThoughtButton{
+    position: absolute;
+    z-index: 999;
+    top: -15px;
+    left: 0px;
+    padding: 0.5em;
+    width: 100%;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.1);
     border-style: none;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3; 
+    -webkit-box-orient: vertical;
 }
 .userHasNoMessage{
-  color: #605f60;
+  color: #7F7F7F;
   border-style: none;
+  padding: 1em 0.3em;
 }
 .picFriendsTopItemlive,
 .picFriendsTopItemadd,

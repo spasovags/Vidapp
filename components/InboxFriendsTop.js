@@ -34,12 +34,12 @@ console.log(' uset ', userThoughtNoMessage);
         <div
           className={`${styles["inboxTopThought"]}`}>
 
-           <button onClick={openChat}
+           {props.friendTop.thought ? <button onClick={openChat}
              className={`${styles["addThoughtButton"]}
                      ${ userThoughtNoMessage ? `${styles["userHasNoMessage"]}` : ""  }`} >
             {props.friendTop.thought}
             
-           </button> 
+           </button> : ''}
              
          </div>  
 
