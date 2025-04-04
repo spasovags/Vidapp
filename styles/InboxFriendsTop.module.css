@@ -19,11 +19,14 @@
     width: 100%;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.1);
     border-style: none;
+}
+.addThoughtButton span{
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
     line-clamp: 3; 
     -webkit-box-orient: vertical;
+
 }
 .userHasNoMessage{
   color: #7F7F7F;

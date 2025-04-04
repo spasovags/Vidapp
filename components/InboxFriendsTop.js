@@ -37,8 +37,9 @@ console.log(' uset ', userThoughtNoMessage);
            {props.friendTop.thought ? <button onClick={openChat}
              className={`${styles["addThoughtButton"]}
                      ${ userThoughtNoMessage ? `${styles["userHasNoMessage"]}` : ""  }`} >
+            <span>
             {props.friendTop.thought}
-            
+            </span>
            </button> : ''}
              
          </div>  
