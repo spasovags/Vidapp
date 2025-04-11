@@ -83,9 +83,12 @@
     position: absolute;
     border-style: none;
     right: 6px;
-    bottom: 6px;
+    bottom: -3px;
     color: transparent;
     font-size: medium;
+    background: white;
+    background-clip: padding-box;
+    border: solid 2px #fafafa;
 }
 .add {
     background-color:#00d3ff;
