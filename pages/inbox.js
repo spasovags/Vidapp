@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
 import styles from '../styles/inbox.module.css'
 import InboxFriendsTopContainer from '../components/InboxFriendsTopContainer'
 import InboxTopFixed from '../components/InboxTopFixed'
