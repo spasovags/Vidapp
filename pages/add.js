@@ -31,10 +31,10 @@ autoPlayVid();
     <div className={`${styles["addContainer"]}`}>
       <div className={`${styles["addVidContainer"]}`}>
        <video 
-       className={`${styles["addVideoBackg"]}`}
-       id={idAddVideo} 
-       autoPlay>
-      </video>
+        className={`${styles["addVideoBackg"]}`}
+        id={idAddVideo} 
+        autoPlay>
+       </video>
 
 
        <div >

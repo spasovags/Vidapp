@@ -1,10 +1,20 @@
+.addContainer{
+  height: 1500px;
+  width: 100%;
+  background-color: black;
+
+}
 .addContainer,
-.addVidContainer,
-.addVidContainer video {
-    height: auto;
+.addVidContainer {
+    height: 1500px;
     width: 100%;
+    background-color: black;
 }
 .addVideoBackg{
   position: fixed;
   top: 20px;
+  left: -35%;
+  height: 85%;
+  overflow: hidden;
+  border-radius: 180px;
 }
