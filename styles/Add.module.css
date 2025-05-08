@@ -1,11 +1,10 @@
 .addContainer,
 .addVidContainer,
 .addVidContainer video {
-    height: 500px;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 .addVideoBackg{
-  width: 100%;
   position: fixed;
-  top: 0;
+  top: 20px;
 }
