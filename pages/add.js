@@ -1,4 +1,7 @@
 import styles from '../styles/Add.module.css'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Add() {
@@ -30,6 +33,16 @@ autoPlayVid();
   return (    
     <div className={`${styles["addContainer"]}`}>
       <div className={`${styles["addVidContainer"]}`}>
+       <div className={`${styles["optionsContainer"]}`}>
+         <div className={`${styles["otionsRel"]}`}>
+          <div className={`${styles["optionsCloseTop"]}`}>
+      
+           <Link href="/">
+             <FontAwesomeIcon icon={faXmark} />             
+           </Link>          
+          </div>
+         </div>
+       </div>
        <video 
         className={`${styles["addVideoBackg"]}`}
         id={idAddVideo} 

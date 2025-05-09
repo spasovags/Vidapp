@@ -7,11 +7,6 @@ import FooterWhite from '../components/FooterWhite'
 
 const inbox = () => {
 
- /* const sendContextMenu = (event) => {
-    event.stopPropagation();
-
-    props.clickFunc(event)
-  };*/
   const [isSendButtonText, setIsSendButtonText] = useState("Send"); 
   const [isSentContextMenu, setIsSentContextMenu] = useState(false);
 
