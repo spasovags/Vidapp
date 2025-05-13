@@ -1,7 +1,7 @@
 import styles from '../styles/Add.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faRepeat } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Add() {
@@ -22,7 +22,7 @@ const pauseVideo = () => {
                                       
       vid.pause(); 
   }
-  const playVideo = () => {
+const playVideo = () => {
     const vid = document.querySelector(`#${idAddVideo}`); 
                                         
         vid.play(); 
@@ -39,7 +39,15 @@ autoPlayVid();
       
            <Link href="/">
              <FontAwesomeIcon icon={faXmark} />             
-           </Link>          
+           </Link>  
+            <button 
+              className={`${styles["addSoundToPost"]}`} >
+              <span class="material-symbols-outlined">music_note</span> Add sound
+            </button>   
+            <button 
+              className={`${styles["switchCamera"]}`} >
+              <FontAwesomeIcon icon={faRepeat} />
+            </button>
           </div>
          </div>
        </div>
