@@ -21,7 +21,7 @@
 }
 .optionsContainer{
   position: fixed; 
-  top: 0px;
+  top: 20px;
   left: 0px;
   z-index: 1000;
   height: 100%;
@@ -34,7 +34,7 @@
 }
 .optionsCloseTop{
   position: absolute;
-  top: 8px;
+  top: -12px;
   left: 35px;
   font-size: 2rem;
   color: white;
@@ -54,6 +54,11 @@
   border-style: none;
   border-radius: 50px;
   padding: 0.3em;
+  font-size: 1rem;
+}
+.addSoundToPost span{
+  vertical-align: text-bottom;
+  font-size: 1rem;
 }
 .material-symbols-outlined {
   font-variation-settings:
