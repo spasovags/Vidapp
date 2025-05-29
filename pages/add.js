@@ -1,7 +1,7 @@
 import styles from '../styles/Add.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark, faRepeat } from '@fortawesome/free-solid-svg-icons'
+import { faClockRotateLeft, faBolt, faXmark, faRepeat } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Add() {
@@ -35,8 +35,7 @@ autoPlayVid();
       <div className={`${styles["addVidContainer"]}`}>
        <div className={`${styles["optionsContainer"]}`}>
          <div className={`${styles["otionsRel"]}`}>
-          <div className={`${styles["optionsCloseTop"]}`}>
-      
+          <div className={`${styles["optionsCloseTop"]}`}>     
            <Link href="/">
              <FontAwesomeIcon icon={faXmark} />             
            </Link>  
@@ -47,6 +46,25 @@ autoPlayVid();
             <button 
               className={`${styles["switchCamera"]}`} >
               <FontAwesomeIcon icon={faRepeat} />
+            </button>
+          </div>
+          <div className={`${styles["cameraOptions"]}`}>     
+             <button 
+              className={`${styles["cameraOption"]}`} >
+              <FontAwesomeIcon icon={faBolt} />            
+            </button>   
+            <button 
+              className={`${styles["cameraOption"]}`} >
+              <FontAwesomeIcon icon={faClockRotateLeft} />
+            </button>
+          
+            <button 
+              className={`${styles["cameraOption"]}`} >
+              <FontAwesomeIcon icon={faDownLeftAndUpRightToCenter} />
+            </button>   
+            <button 
+              className={`${styles["cameraOption"]}`} >
+              <FontAwesomeIcon icon={faWandMagicSparkles} />
             </button>
           </div>
          </div>

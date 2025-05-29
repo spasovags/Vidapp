@@ -35,15 +35,13 @@
 .optionsCloseTop{
   position: absolute;
   top: -12px;
-  left: 35px;
+  left: 0px;
   font-size: 2rem;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-right: 35px;
-
 }
 .optionsCloseTop svg {
   color: white;
@@ -53,7 +51,7 @@
   color: white;
   border-style: none;
   border-radius: 50px;
-  padding: 0.3em;
+  padding: 1em;
   font-size: 1rem;
 }
 .addSoundToPost span{
@@ -72,4 +70,21 @@
   color: white;
   background-color: transparent;
   border-style: none;
+  margin-right: 31px;
+}
+.cameraOptions{
+  position: fixed;
+  top: 45px;
+  right: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2em;
+}
+.cameraOption {
+  color: white;
+  background-color: transparent;
+  border-style: none;
+  padding-right: 0px;
 }
