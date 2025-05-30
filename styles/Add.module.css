@@ -46,13 +46,18 @@
 .optionsCloseTop svg {
   color: white;
 }
+.linkHomePost{
+  margin-left: 10px;
+  font-size: 2rem;
+
+}
 .addSoundToPost{
   background-color: rgba(0, 0, 0, 0.303);
   color: white;
   border-style: none;
   border-radius: 50px;
   padding: 1em;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .addSoundToPost span{
   vertical-align: text-bottom;
@@ -70,21 +75,23 @@
   color: white;
   background-color: transparent;
   border-style: none;
-  margin-right: 31px;
+  margin-right: 10px;
+  font-size: 1.3rem;
 }
 .cameraOptions{
   position: fixed;
-  top: 45px;
-  right: 35px;
+  top: 3.5em;
+  right: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  column-gap: 2em;
+  gap: 1em;
 }
 .cameraOption {
   color: white;
   background-color: transparent;
   border-style: none;
   padding-right: 0px;
+  font-size: 1.3rem;
 }

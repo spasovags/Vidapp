@@ -1,7 +1,7 @@
 import styles from '../styles/Add.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClockRotateLeft, faBolt, faXmark, faRepeat } from '@fortawesome/free-solid-svg-icons'
+import { faWandMagicSparkles, faDownLeftAndUpRightToCenter, faClockRotateLeft, faBolt, faXmark, faRepeat } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Add() {
@@ -36,7 +36,7 @@ autoPlayVid();
        <div className={`${styles["optionsContainer"]}`}>
          <div className={`${styles["otionsRel"]}`}>
           <div className={`${styles["optionsCloseTop"]}`}>     
-           <Link href="/">
+           <Link className={`${styles["linkHomePost"]}`} href="/">
              <FontAwesomeIcon icon={faXmark} />             
            </Link>  
             <button 
