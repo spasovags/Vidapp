@@ -95,3 +95,18 @@
   padding-right: 0px;
   font-size: 1.3rem;
 }
+.cameraOption:nth-child(1) {
+  border-bottom-style: solid;
+  border-color: #ffffff8f;
+  padding-bottom: 0.7em;
+  border-width: thin;
+} 
+.filterOptions{
+  position: fixed;
+  bottom: 3.5em;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}

@@ -67,6 +67,25 @@ autoPlayVid();
               <FontAwesomeIcon icon={faWandMagicSparkles} />
             </button>
           </div>
+          <div className={`${styles["filterOptions"]}`}>     
+             <button 
+              className={`${styles["filterOption"]}`} >
+              <FontAwesomeIcon icon={faBolt} />            
+            </button>   
+            <button 
+              className={`${styles["filterOption"]}`} >
+              <FontAwesomeIcon icon={faClockRotateLeft} />
+            </button>
+          
+            <button 
+              className={`${styles["filterOption"]}`} >
+              <FontAwesomeIcon icon={faDownLeftAndUpRightToCenter} />
+            </button>   
+            <button 
+              className={`${styles["filterOption"]}`} >
+              <FontAwesomeIcon icon={faWandMagicSparkles} />
+            </button>
+          </div>
          </div>
        </div>
        <video 
