@@ -67,24 +67,49 @@ autoPlayVid();
               <FontAwesomeIcon icon={faWandMagicSparkles} />
             </button>
           </div>
-          <div className={`${styles["filterOptions"]}`}>     
+          <div className={`${styles["filterOptionsContainer"]}`}>     
+           <div className={`${styles["filterOptionsTime"]}`}>     
              <button 
               className={`${styles["filterOption"]}`} >
-              <FontAwesomeIcon icon={faBolt} />            
+                10m
+            </button>  
+             <button 
+              className={`${styles["filterOption"]}`} >
+                60s
             </button>   
             <button 
               className={`${styles["filterOption"]}`} >
-              <FontAwesomeIcon icon={faClockRotateLeft} />
+                15s
             </button>
           
             <button 
               className={`${styles["filterOption"]}`} >
-              <FontAwesomeIcon icon={faDownLeftAndUpRightToCenter} />
+                PHOTO
             </button>   
             <button 
               className={`${styles["filterOption"]}`} >
-              <FontAwesomeIcon icon={faWandMagicSparkles} />
+                TEXT
             </button>
+           </div>
+           <div className={`${styles["filterOptionsEffects"]}`}>     
+             <button 
+              className={`${styles["filterOne"]}`} >
+              1          
+            </button>   
+            <button 
+              className={`${styles["filterTwo"]}`} >
+             2           
+            </button>
+          
+            <button 
+              className={`${styles["filterThree"]}`} >
+              3
+            </button>   
+            <button 
+              className={`${styles["filterFour"]}`} >
+             4
+            </button>
+           </div>
           </div>
          </div>
        </div>
@@ -95,7 +120,7 @@ autoPlayVid();
        </video>
 
 
-       <div >
+       <div className={`${styles["fcts"]}`} >
         <button onClick={pauseVideo}>pause</button>
         <button onClick={playVideo}>play</button>
 

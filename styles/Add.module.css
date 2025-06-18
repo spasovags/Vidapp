@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=music_note');
 
+.fcts button{
+  position: relative;
+  z-index: 100000;
+}
 .addContainer{
   height: 1500px;
   width: 100%;
@@ -101,12 +105,54 @@
   padding-bottom: 0.7em;
   border-width: thin;
 } 
-.filterOptions{
+.filterOptionsContainer{
   position: fixed;
   bottom: 3.5em;
   left: 14px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1em;
 }
+.filterOptionsEffects,
+.filterOptionsTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+}
+.filterOne,
+.filterTwo,
+.filterThree,
+.filterFour {
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-style: none;
+  border-radius: 50px;
+  color: transparent;
+  padding: 1em 1.5em;
+}
+.filterOne {
+  background-image: url("../public/fireFilter.png");
+}
+.filterTwo {
+  background-image: url("../public/girlFilter.png");
+}
+.filterThree {
+  background-color: white;
+  padding: 0em 2.3em;
+  background-clip: padding-box;
+  position: relative;
+  border-radius: 50px;
+  height: 70px;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+.filterFour {
+  background-image: url("../public/yourPhoto.png");
+}
+
