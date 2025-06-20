@@ -108,7 +108,7 @@
 .filterOptionsContainer{
   position: fixed;
   bottom: 3.5em;
-  left: 14px;
+  left: 11px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,6 +122,21 @@
   justify-content: center;
   gap: 1em;
 
+}
+.filterOptionsTime{
+  gap: 0.4em;
+}
+.filterOptionsTime button{
+  background-color: transparent;
+  color: white;
+  border-style: none;
+}
+.filterOptionsTime button:nth-child(4){
+  background-color: white;
+  color: black;
+  border-style: none;
+  border-radius: 13px;
+  padding: 0.3em 0.6em;
 }
 .filterOne,
 .filterTwo,
@@ -154,5 +169,7 @@
 }
 .filterFour {
   background-image: url("../public/yourPhoto.png");
+  border-radius: 5px;
+  
 }
 
