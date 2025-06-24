@@ -108,12 +108,14 @@
 .filterOptionsContainer{
   position: fixed;
   bottom: 3.5em;
-  left: 11px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
+  left: 0px;
+  right: 0px;
+  
+}
+.filterOptionsEffectsTimeContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .filterOptionsEffects,
 .filterOptionsTime {
@@ -125,6 +127,9 @@
 }
 .filterOptionsTime{
   gap: 0.4em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 .filterOptionsTime button{
   background-color: transparent;
@@ -137,6 +142,17 @@
   border-style: none;
   border-radius: 13px;
   padding: 0.3em 0.6em;
+}
+.filterOptionsButtonsContainer{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+}
+.filterOptionsButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .filterOne,
 .filterTwo,

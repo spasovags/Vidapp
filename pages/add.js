@@ -68,11 +68,12 @@ autoPlayVid();
             </button>
           </div>
           <div className={`${styles["filterOptionsContainer"]}`}>     
-           <div className={`${styles["filterOptionsTime"]}`}>     
+           <div className={`${styles["filterOptionsEffectsTimeContainer"]}`}>               
+            <div className={`${styles["filterOptionsTime"]}`}>     
              <button 
               className={`${styles["filterOption"]}`} >
                 10m
-            </button>  
+             </button>  
              <button 
               className={`${styles["filterOption"]}`} >
                 60s
@@ -90,8 +91,20 @@ autoPlayVid();
               className={`${styles["filterOption"]}`} >
                 TEXT
             </button>
-           </div>
-           <div className={`${styles["filterOptionsEffects"]}`}>     
+            </div>
+            <div className={`${styles["filterOptionsButtonsContainer"]}`}> 
+             <div className={`${styles["filterOptionsButtons"]}`}> 
+            <button 
+              className={`${styles["filterOption"]}`} >
+                e
+            </button> 
+            <button 
+              className={`${styles["filterThree"]}`} >
+              3
+            </button> 
+             </div>
+            </div>
+            <div className={`${styles["filterOptionsEffects"]}`}>     
              <button 
               className={`${styles["filterOne"]}`} >
               1          
@@ -100,11 +113,8 @@ autoPlayVid();
               className={`${styles["filterTwo"]}`} >
              2           
             </button>
-          
-            <button 
-              className={`${styles["filterThree"]}`} >
-              3
-            </button>   
+            </div>
+                     
             <button 
               className={`${styles["filterFour"]}`} >
              4
