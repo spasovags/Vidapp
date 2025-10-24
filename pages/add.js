@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import styles from '../styles/Add.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +10,18 @@ export default function Add() {
   const idAddVideo ="idAddVideo";
   const recordVideo = "recordVideo";
   let isPlaying = false;
-  
+
+  const [isPhotoTextSelected, setIsPhotoTextSelected] = useState(false);
+  const [isPhotoSelected, setIsPhotoSelected] = useState(false);
+  const [isFirstDelaySelected, setIsFirstDelaySelected] = useState(false);
+  const [isSecondDelaySelected, setIsSecondDelaySelected] = useState(false);
+  const [thirdDelaySelected, setIsThirdDelaySelected] = useState(false);
+
+   const toggleIsPhotoTextSelected = () => {
+      setIsPhotoTextSelected((current) => !current);
+      setIsPhotoSelected(false);
+  };
+
   const autoPlayVid = async () => {
     const vid = document.querySelector(`#${idAddVideo}`); 
     const stream = await navigator.mediaDevices.getUserMedia({video: true});
@@ -24,11 +36,12 @@ const pauseVideo = () => {
   }
 const playVideo = () => {
     const vid = document.querySelector(`#${idAddVideo}`); 
-                                        
+                console.log("playvid button");                       
         vid.play(); 
     }
 
 autoPlayVid();
+
 
   return (    
     <div className={`${styles["addContainer"]}`}>
@@ -69,39 +82,46 @@ autoPlayVid();
           </div>
           <div className={`${styles["filterOptionsContainer"]}`}>     
            <div className={`${styles["filterOptionsEffectsTimeContainer"]}`}>               
-            <div className={`${styles["filterOptionsTime"]}`}>     
+            <div className={`${styles["filterOptionsTime"]}`}>
              <button 
-              className={`${styles["filterOption"]}`} >
+              className={`${styles["filterOption"]}
+                        ${ isFirstDelaySelected ? `${styles["firstDelaySelected"]}` : "" }`}
+              onClick={toggleIsFirstDelaySelected}>
                 10m
              </button>  
              <button 
-              className={`${styles["filterOption"]}`} >
+              className={`${styles["filterOption"]}
+                        ${ isSecondDelaySelected ? `${styles["secondDelaySelected"]}` : "" }`}
+              onClick={toggleIsSecondDelaySelected}>
                 60s
-            </button>   
-            <button 
-              className={`${styles["filterOption"]}`} >
+             </button>   
+             <button              
+              className={`${styles["filterOption"]}
+                        ${ isThirdDelaySelected ? `${styles["thirdDelaySelected"]}` : "" }`}
+              onClick={toggleIsThirdDelaySelected}>
                 15s
-            </button>
+             </button>
           
-            <button 
-              className={`${styles["filterOption"]}`} >
+             <button 
+              className={`${styles["filterOption"]}
+                        ${ isPhotoSelected ? `${styles["photoSelected"]}` : "" }`}
+              onClick={toggleIsTimeSelected}>                              
                 PHOTO
-            </button>   
-            <button 
-              className={`${styles["filterOption"]}`} >
+             </button>   
+             <button 
+              className={`${styles["filterOption"]}
+                       ${ isPhotoTextSelected ? `${styles["photoTextSelected"]}` : "" }`}
+              onClick={toggleIsPhotoTextSelected}>                       
                 TEXT
-            </button>
+             </button>
             </div>
             <div className={`${styles["filterOptionsButtonsContainer"]}`}> 
              <div className={`${styles["filterOptionsButtons"]}`}> 
-            <button 
-              className={`${styles["filterOption"]}`} >
-                e
-            </button> 
-            <button 
-              className={`${styles["filterThree"]}`} >
-              3
-            </button> 
+
+              <button 
+               className={`${styles["filterThree"]}`} >
+               3
+              </button> 
              </div>
             </div>
             <div className={`${styles["filterOptionsEffects"]}`}>     

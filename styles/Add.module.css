@@ -128,17 +128,31 @@
 .filterOptionsTime{
   gap: 0.4em;
   position: absolute;
-  top: 0px;
+  bottom: 90px;
   left: 0px;
 }
-.filterOptionsTime button{
+.filterOption{
   background-color: transparent;
   color: white;
   border-style: none;
+  scroll-snap-align: center;
 }
-.filterOptionsTime button:nth-child(4){
-  background-color: white;
+.photoSelected, .photoTextSelected{
+  background-color: #cccccc;
   color: black;
+}
+
+.filterOptionsEffects{
+  gap: 0.4em;
+  position: absolute;
+  bottom: 11px;
+  left: 0px;
+
+}
+
+.filterTimeButton{
+  background-color: white;
+  color: white;
   border-style: none;
   border-radius: 13px;
   padding: 0.3em 0.6em;
@@ -153,6 +167,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 1em;
 }
 .filterOne,
 .filterTwo,
@@ -186,6 +201,8 @@
 .filterFour {
   background-image: url("../public/yourPhoto.png");
   border-radius: 5px;
-  
+  position: absolute;
+  bottom: 11px;
+  right: 45px;
 }
 
