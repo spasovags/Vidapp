@@ -15,11 +15,44 @@ export default function Add() {
   const [isPhotoSelected, setIsPhotoSelected] = useState(false);
   const [isFirstDelaySelected, setIsFirstDelaySelected] = useState(false);
   const [isSecondDelaySelected, setIsSecondDelaySelected] = useState(false);
-  const [thirdDelaySelected, setIsThirdDelaySelected] = useState(false);
+  const [isThirdDelaySelected, setIsThirdDelaySelected] = useState(false);
 
-   const toggleIsPhotoTextSelected = () => {
+  const toggleIsFirstDelaySelected = () => {
+      setIsFirstDelaySelected((current) => !current);
+      setIsPhotoSelected(false);
+      setIsSecondDelaySelected(false);
+      setIsThirdDelaySelected(false);
+      setIsPhotoTextSelected(false);
+  };
+  const toggleIsSecondDelaySelected = () => {
+      setIsSecondDelaySelected((current) => !current);
+      setIsPhotoSelected(false);
+      setIsFirstDelaySelected(false);
+      setIsThirdDelaySelected(false);
+      setIsPhotoTextSelected(false);
+  };
+  const toggleIsThirdDelaySelected = () => {
+      setIsThirdDelaySelected((current) => !current);
+      setIsPhotoSelected(false);
+      setIsFirstDelaySelected(false);
+      setIsSecondDelaySelected(false);
+      setIsPhotoTextSelected(false);
+  };
+  const toggleIsPhotoSelected = () => {
+      setIsPhotoSelected((current) => !current);
+      setIsPhotoTextSelected(false);
+      setIsThirdDelaySelected(false);
+      setIsFirstDelaySelected(false);
+      setIsSecondDelaySelected(false);
+ 
+  };
+
+  const toggleIsPhotoTextSelected = () => {
       setIsPhotoTextSelected((current) => !current);
       setIsPhotoSelected(false);
+       setIsThirdDelaySelected(false);
+      setIsFirstDelaySelected(false);
+      setIsSecondDelaySelected(false);
   };
 
   const autoPlayVid = async () => {
@@ -85,19 +118,19 @@ autoPlayVid();
             <div className={`${styles["filterOptionsTime"]}`}>
              <button 
               className={`${styles["filterOption"]}
-                        ${ isFirstDelaySelected ? `${styles["firstDelaySelected"]}` : "" }`}
+                        ${ isFirstDelaySelected ? `${styles["photoSelected"]}` : "" }`}
               onClick={toggleIsFirstDelaySelected}>
                 10m
              </button>  
              <button 
               className={`${styles["filterOption"]}
-                        ${ isSecondDelaySelected ? `${styles["secondDelaySelected"]}` : "" }`}
+                        ${ isSecondDelaySelected ? `${styles["photoSelected"]}` : "" }`}
               onClick={toggleIsSecondDelaySelected}>
                 60s
              </button>   
              <button              
               className={`${styles["filterOption"]}
-                        ${ isThirdDelaySelected ? `${styles["thirdDelaySelected"]}` : "" }`}
+                        ${ isThirdDelaySelected ? `${styles["photoSelected"]}` : "" }`}
               onClick={toggleIsThirdDelaySelected}>
                 15s
              </button>
@@ -105,7 +138,7 @@ autoPlayVid();
              <button 
               className={`${styles["filterOption"]}
                         ${ isPhotoSelected ? `${styles["photoSelected"]}` : "" }`}
-              onClick={toggleIsTimeSelected}>                              
+              onClick={toggleIsPhotoSelected}>                              
                 PHOTO
              </button>   
              <button 
